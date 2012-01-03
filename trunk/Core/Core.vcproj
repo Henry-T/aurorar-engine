@@ -21,7 +21,7 @@
 			OutputDirectory="..\Bin\Debug"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
-			CharacterSet="1"
+			CharacterSet="2"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -219,6 +219,10 @@
 					/>
 				</FileConfiguration>
 			</File>
+			<File
+				RelativePath=".\String.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="头文件"
@@ -230,6 +234,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Prerequisites.h"
+				>
+			</File>
+			<File
 				RelativePath=".\RenderEngine.h"
 				>
 			</File>
@@ -238,20 +246,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\String.h"
+				>
+			</File>
+			<File
 				RelativePath=".\targetver.h"
 				>
 			</File>
 		</Filter>
-		<Filter
-			Name="资源文件"
-			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
-			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
-			>
-		</Filter>
-		<File
-			RelativePath=".\ReadMe.txt"
-			>
-		</File>
 	</Files>
 	<Globals>
 	</Globals>
