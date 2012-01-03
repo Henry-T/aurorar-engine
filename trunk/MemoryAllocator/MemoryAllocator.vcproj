@@ -21,7 +21,7 @@
 			OutputDirectory="..\Lib\Debug"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="4"
-			CharacterSet="1"
+			CharacterSet="2"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -149,11 +149,15 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\MemoryAllocator.cpp"
+				RelativePath=".\AllocatedObject.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\nedmalloc.c"
+				RelativePath=".\MemoryNedPooling.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\MemoryTracker.cpp"
 				>
 			</File>
 		</Filter>
@@ -163,11 +167,35 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\AllocatedObject.h"
+				>
+			</File>
+			<File
+				RelativePath=".\MemoryAllocatorConfig.h"
+				>
+			</File>
+			<File
+				RelativePath=".\MemoryNedPooling.h"
+				>
+			</File>
+			<File
+				RelativePath=".\MemoryTracker.h"
+				>
+			</File>
+			<File
+				RelativePath=".\STLAllocator.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="nedmalloc"
+			>
+			<File
 				RelativePath=".\malloc.c.h"
 				>
 			</File>
 			<File
-				RelativePath=".\MemoryAllocator.h"
+				RelativePath=".\nedmalloc.c"
 				>
 			</File>
 			<File
@@ -175,16 +203,6 @@
 				>
 			</File>
 		</Filter>
-		<Filter
-			Name="资源文件"
-			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
-			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
-			>
-		</Filter>
-		<File
-			RelativePath=".\ReadMe.txt"
-			>
-		</File>
 	</Files>
 	<Globals>
 	</Globals>
