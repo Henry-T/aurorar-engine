@@ -18,7 +18,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			OutputDirectory="..\Bin\Debug"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
@@ -61,8 +61,10 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="..\Lib\Debug"
 				GenerateDebugInformation="true"
 				SubSystem="2"
+				ImportLibrary="..\Lib\Debug\$(TargetName).lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -89,7 +91,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			OutputDirectory="..\Bin\Release"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
@@ -114,6 +116,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
+				AdditionalIncludeDirectories=""
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;DX9RENDERER_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -133,10 +136,12 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories="..\Lib\Debug"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
+				ImportLibrary="..\Lib\Release\$(TargetName).lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -193,7 +198,7 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\DX9Renderer.cpp"
+				RelativePath=".\DX9RenderEngine.cpp"
 				>
 			</File>
 			<File
@@ -222,6 +227,10 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\DX9RenderEngine.h"
+				>
+			</File>
 			<File
 				RelativePath=".\DX9Renderer.h"
 				>
