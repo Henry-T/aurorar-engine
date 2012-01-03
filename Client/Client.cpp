@@ -3,6 +3,8 @@
 
 #include "stdafx.h"
 #include "Client.h"
+#include "..\DX9Renderer\DX9RenderEngine.h"
+#include "..\Common\WheatyExceptionReport.h"
 
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
@@ -41,6 +43,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   Aurora::RenderEngine* re = new Aurora::DX9RenderEngine;
 
    return TRUE;
 }
@@ -107,26 +111,34 @@ int RunMainLoop(HACCEL& hAccelTable)
 {
 	MSG msg;
 
-	// 主消息循环:
-	while (true)
-	{
-		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+	//__try
+	//{
+		// 主消息循环:
+		while (true)
 		{
-			if (msg.message == WM_QUIT)
+			if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 			{
-				break;
+				if (msg.message == WM_QUIT)
+				{
+					break;
+				}
+				else if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+				{
+					TranslateMessage(&msg);
+					DispatchMessage(&msg);
+				}
 			}
-			else if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+			else
 			{
-				TranslateMessage(&msg);
-				DispatchMessage(&msg);
-			}
-		}
-		else
-		{
 
+			}
 		}
-	}
+	//}
+// 	__except (WheatyExceptionReport::WheatyUnhandledExceptionFilter)
+// 	{
+// 
+// 	}
+	
 
 	return (int) msg.wParam;
 }

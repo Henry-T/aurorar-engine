@@ -1,11 +1,9 @@
-#define WIN32_LEAN_AND_MEAN
-
-#include "MeRTLibs.h"
+#include <windows.h>
+#include <string>
+#include <shlwapi.h>
+#include <tchar.h>
+#undef _tprintf
 #include "WheatyExceptionReport.h"
-
-#pragma comment(lib, "shlwapi.lib")
-#pragma comment(linker, "/defaultlib:dbghelp.lib")
-
 
 #pragma warning ( push )
 #pragma warning ( disable : 4715 )

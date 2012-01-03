@@ -611,7 +611,7 @@ public:
 	virtual ~TiXmlElement();
 
 // OGRE CHANGE 
-// Resolve ambiguity of std::string / const char* conversion of Ogre::String
+// Resolve ambiguity of std::string / const char* conversion of Aurora::String
 #ifndef TIXML_USE_STL
 // OGRE CHANGE
 	/** Given an attribute name, attribute returns the value

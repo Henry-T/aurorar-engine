@@ -1,6 +1,9 @@
 /********************************************************************
-    Filename:    WheatyExceptionReport.h
-    MaintenanceMan Mail: Luo_157@hotmail.com
+	创建时间:	4:1:2012   1:08
+	文件名	:	WheatyExceptionReport
+	创建者:		丁亮
+	
+	文件作用:	生成Dump文件
 *********************************************************************/
 
 #pragma once
