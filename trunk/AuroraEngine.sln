@@ -2,10 +2,18 @@
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcproj", "{40EF0C8A-DBF6-459A-9EB3-FD0B02DF2B98}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8FFFE91C-F0AC-4341-9F50-245B4DFAD4FB} = {8FFFE91C-F0AC-4341-9F50-245B4DFAD4FB}
+		{A099C41D-458E-4914-AB7E-6B4434505EC9} = {A099C41D-458E-4914-AB7E-6B4434505EC9}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core", "Core\Core.vcproj", "{A099C41D-458E-4914-AB7E-6B4434505EC9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DX9Renderer", "DX9Renderer\DX9Renderer.vcproj", "{8FFFE91C-F0AC-4341-9F50-245B4DFAD4FB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A099C41D-458E-4914-AB7E-6B4434505EC9} = {A099C41D-458E-4914-AB7E-6B4434505EC9}
+		{7F5AF277-0372-4850-A63C-2E6C8E98280D} = {7F5AF277-0372-4850-A63C-2E6C8E98280D}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WorldEditor", "WorldEditor\WorldEditor.vcproj", "{8030AC20-42FB-4CF0-928D-BF031BE0B213}"
 EndProject
@@ -14,6 +22,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelViewer", "ModelViewer\ModelViewer.vcproj", "{B134ED61-04DC-46A7-9471-7FBEE7C2C12B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaxPlugin", "MaxPlugin\MaxPlugin.vcproj", "{D5826E36-158F-4F35-8697-F19B564C0D35}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TinyXML", "TinyXML\TinyXML.vcproj", "{A4458B1F-0220-40F0-80E6-DCE3C880C0A1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryAllocator", "MemoryAllocator\MemoryAllocator.vcproj", "{7F5AF277-0372-4850-A63C-2E6C8E98280D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +61,14 @@ Global
 		{D5826E36-158F-4F35-8697-F19B564C0D35}.Debug|Win32.Build.0 = Debug|Win32
 		{D5826E36-158F-4F35-8697-F19B564C0D35}.Release|Win32.ActiveCfg = Release|Win32
 		{D5826E36-158F-4F35-8697-F19B564C0D35}.Release|Win32.Build.0 = Release|Win32
+		{A4458B1F-0220-40F0-80E6-DCE3C880C0A1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A4458B1F-0220-40F0-80E6-DCE3C880C0A1}.Debug|Win32.Build.0 = Debug|Win32
+		{A4458B1F-0220-40F0-80E6-DCE3C880C0A1}.Release|Win32.ActiveCfg = Release|Win32
+		{A4458B1F-0220-40F0-80E6-DCE3C880C0A1}.Release|Win32.Build.0 = Release|Win32
+		{7F5AF277-0372-4850-A63C-2E6C8E98280D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7F5AF277-0372-4850-A63C-2E6C8E98280D}.Debug|Win32.Build.0 = Debug|Win32
+		{7F5AF277-0372-4850-A63C-2E6C8E98280D}.Release|Win32.ActiveCfg = Release|Win32
+		{7F5AF277-0372-4850-A63C-2E6C8E98280D}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
