@@ -111,8 +111,8 @@ int RunMainLoop(HACCEL& hAccelTable)
 {
 	MSG msg;
 
-	//__try
-	//{
+	__try
+	{
 		// 主消息循环:
 		while (true)
 		{
@@ -133,11 +133,11 @@ int RunMainLoop(HACCEL& hAccelTable)
 
 			}
 		}
-	//}
-// 	__except (WheatyExceptionReport::WheatyUnhandledExceptionFilter)
-// 	{
-// 
-// 	}
+	}
+ 	__except (WheatyExceptionReport::WheatyUnhandledExceptionFilter(GetExceptionInformation()), EXCEPTION_CONTINUE_EXECUTION)
+ 	{
+ 
+ 	}
 	
 
 	return (int) msg.wParam;
