@@ -196,6 +196,18 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\Exception.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Log.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\LogManager.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\RenderEngine.cpp"
 				>
 			</File>
@@ -234,11 +246,27 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Exception.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Log.h"
+				>
+			</File>
+			<File
+				RelativePath=".\LogManager.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Prerequisites.h"
 				>
 			</File>
 			<File
 				RelativePath=".\RenderEngine.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Singleton.h"
 				>
 			</File>
 			<File
