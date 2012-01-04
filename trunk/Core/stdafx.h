@@ -15,3 +15,6 @@
 
 // TODO: 在此处引用程序需要的其他头文件
 #include "Core.h"
+#include <assert.h>
+
+#pragma warning(disable:4251)

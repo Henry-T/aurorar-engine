@@ -8,6 +8,7 @@
 #include <list>
 #include <set>
 #include <map>
+#include <sstream>
 
 #define UNICODE 0
 #define USE_NED_MEM_ALLOC 1
@@ -205,4 +206,11 @@ namespace Aurora
 namespace Aurora
 {
 	class RenderEngine;
+	class Log;
+	class LogManager;
+	class Exception;
+	class ExceptionFactory;
+	class StringUtil;
 }
+
+#include "..\MemoryAllocator\MemoryAllocatorConfig.h"
