@@ -1,11 +1,3 @@
-/********************************************************************
-	创建时间:	4:1:2012   1:08
-	文件名	:	WheatyExceptionReport
-	创建者:		丁亮
-	
-	文件作用:	生成Dump文件
-*********************************************************************/
-
 #pragma once
 
 #include <dbghelp.h>
@@ -72,34 +64,11 @@ class WheatyExceptionReport
 
     // Variables used by the class
     static TCHAR m_szLogFileName[MAX_PATH];
+	static TCHAR m_szDumpFileName[MAX_PATH];
     static LPTOP_LEVEL_EXCEPTION_FILTER m_previousFilter;
     static HANDLE m_hReportFile;
     static HANDLE m_hProcess;
 };
-// Luo_157 added 2004.09.26
-class CExceptionAddressToSrcLine
-{
-	enum
-	{
-		eMaxSrcFileDest = 1024
-	};
-public:
-	CExceptionAddressToSrcLine(void);
-	~CExceptionAddressToSrcLine(void);
 
-	DWORD	HexToDec( const char* pszNumber );
-	BOOL	AddrToSrcLine( const char* pszMapFilename, DWORD dwExceptAddr );
-	const char* GetSrcFileDesc(){ return m_szSrcFileDesc; }
-	DWORD	GetSrcLine(){ return m_dwNearestSrcLine; }
-	void	SetMapFilename( const char* pszMapFilename );
-	BOOL	IsMapFileExist();
-	BOOL	Exception( DWORD dwExceptAddr );
-protected:
-	DWORD	m_dwNearestSrcAddr;
-	DWORD	m_dwNearestSrcLine;
-	char	m_szSrcFileDesc[eMaxSrcFileDest];
-	char	m_szMapFilename[MAX_PATH];
 
-};
-
-//extern WheatyExceptionReport g_WheatyExceptionReport; //  global instance of class
+extern WheatyExceptionReport g_WheatyExceptionReport; //  global instance of class

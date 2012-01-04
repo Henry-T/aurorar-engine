@@ -130,11 +130,19 @@ int RunMainLoop(HACCEL& hAccelTable)
 			}
 			else
 			{
+				class Fuck
+				{
+				public:
+					int* x;
+				};
 
+				Fuck* fuck;
+
+				int y = *(fuck->x);
 			}
 		}
 	}
- 	__except (WheatyExceptionReport::WheatyUnhandledExceptionFilter(GetExceptionInformation()), EXCEPTION_CONTINUE_EXECUTION)
+ 	__except (WheatyExceptionReport::WheatyUnhandledExceptionFilter(GetExceptionInformation()), EXCEPTION_EXECUTE_HANDLER)
  	{
  
  	}
