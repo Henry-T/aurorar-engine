@@ -260,6 +260,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Timer.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Vector2.cpp"
 				>
 			</File>
@@ -283,6 +287,10 @@
 			</File>
 			<File
 				RelativePath=".\AxisAlignedBox.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Bitwise.h"
 				>
 			</File>
 			<File
@@ -363,6 +371,10 @@
 			</File>
 			<File
 				RelativePath=".\targetver.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Timer.h"
 				>
 			</File>
 			<File
