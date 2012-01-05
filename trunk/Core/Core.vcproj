@@ -94,7 +94,7 @@
 			OutputDirectory="..\Bin\Release"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
-			CharacterSet="1"
+			CharacterSet="2"
 			WholeProgramOptimization="1"
 			>
 			<Tool
@@ -232,15 +232,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Ray.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\RenderEngine.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Sphere.cpp"
 				>
 			</File>
 			<File
@@ -323,6 +315,10 @@
 			</File>
 			<File
 				RelativePath=".\Plane.h"
+				>
+			</File>
+			<File
+				RelativePath=".\PlaneBoundedVolume.h"
 				>
 			</File>
 			<File

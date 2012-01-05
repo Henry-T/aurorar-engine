@@ -64,7 +64,7 @@ namespace Aurora
     @note
         <br>Should not be used directly, but trough the LogManager class.
     */
-	class CORE_API Log : public DefaultAlloc
+	class CORE_API Log : public GeneralAllocatedObject
     {
     protected:
         std::ofstream	mfpLog;
