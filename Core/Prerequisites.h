@@ -1,11 +1,10 @@
 #pragma once
 
 #include "StdHeaders.h"
-#include "..\MemoryAllocator\MemoryNedPooling.h"
+#include "..\MemoryAllocator\MemoryAllocatorConfig.h"
 #include "..\MemoryAllocator\STLAllocator.h"
 #include "Platform.h"
 
-#define UNICODE 0
 #define USE_NED_MEM_ALLOC 1
 
 namespace Aurora
@@ -15,13 +14,13 @@ namespace Aurora
 		typedef std::basic_string<wchar_t, std::char_traits<wchar_t>, STLAllocator<wchar_t,GeneralAllocPolicy > >	_StringBase;
 		typedef std::basic_stringstream<wchar_t,std::char_traits<wchar_t>,STLAllocator<wchar_t,GeneralAllocPolicy >> _StringStreamBase;
 #	else
-		typedef std::basic_string<char, std::char_traits<char>, STLAllocator<char,NedPoolingPolicy > >	_StringBase;
-		typedef std::basic_stringstream<char,std::char_traits<char>,STLAllocator<char,NedPoolingPolicy > > _StringStreamBase;
+		typedef std::basic_string<char, std::char_traits<char>, STLAllocator<char,GeneralAllocPolicy > >	_StringBase;
+		typedef std::basic_stringstream<char,std::char_traits<char>,STLAllocator<char,GeneralAllocPolicy > > _StringStreamBase;
 #	endif
 
 
 #	define StdStringT(T) std::basic_string<T, std::char_traits<T>, std::allocator<T> >	
-#	define CustomMemoryStringT(T) std::basic_string<T, std::char_traits<T>, STLAllocator<T,NedPoolingPolicy> >	
+#	define CustomMemoryStringT(T) std::basic_string<T, std::char_traits<T>, STLAllocator<T,GeneralAllocPolicy> >	
 
 	template<typename T>
 	bool operator <(const CustomMemoryStringT(T)& l,const StdStringT(T)& o)
@@ -136,7 +135,7 @@ namespace Aurora
 
 namespace Aurora
 {
-	template <typename T, typename A = STLAllocator<T, NedPoolingPolicy> > 
+	template <typename T, typename A = STLAllocator<T, GeneralAllocPolicy> > 
 	struct deque 
 	{ 
 #if USE_NED_MEM_ALLOC
@@ -146,7 +145,7 @@ namespace Aurora
 #endif
 	}; 
 
-	template <typename T, typename A = STLAllocator<T, NedPoolingPolicy> > 
+	template <typename T, typename A = STLAllocator<T, GeneralAllocPolicy> > 
 	struct vector 
 	{ 
 #if USE_NED_MEM_ALLOC
@@ -156,7 +155,7 @@ namespace Aurora
 #endif
 	}; 
 
-	template <typename T, typename A = STLAllocator<T, NedPoolingPolicy> > 
+	template <typename T, typename A = STLAllocator<T, GeneralAllocPolicy> > 
 	struct list 
 	{ 
 #if USE_NED_MEM_ALLOC
@@ -166,7 +165,7 @@ namespace Aurora
 #endif
 	}; 
 
-	template <typename T, typename P = std::less<T>, typename A = STLAllocator<T, NedPoolingPolicy> > 
+	template <typename T, typename P = std::less<T>, typename A = STLAllocator<T, GeneralAllocPolicy> > 
 	struct set 
 	{ 
 #if USE_NED_MEM_ALLOC
@@ -176,7 +175,7 @@ namespace Aurora
 #endif
 	}; 
 
-	template <typename K, typename V, typename P = std::less<K>, typename A = STLAllocator<std::pair<const K, V>, NedPoolingPolicy> > 
+	template <typename K, typename V, typename P = std::less<K>, typename A = STLAllocator<std::pair<const K, V>, GeneralAllocPolicy> > 
 	struct map 
 	{ 
 #if USE_NED_MEM_ALLOC
@@ -186,7 +185,7 @@ namespace Aurora
 #endif
 	}; 
 
-	template <typename K, typename V, typename P = std::less<K>, typename A = STLAllocator<std::pair<const K, V>, NedPoolingPolicy> > 
+	template <typename K, typename V, typename P = std::less<K>, typename A = STLAllocator<std::pair<const K, V>, GeneralAllocPolicy> > 
 	struct multimap 
 	{ 
 #if USE_NED_MEM_ALLOC
@@ -220,6 +219,7 @@ namespace Aurora
 	class Matrix3;
 	class Matrix4;
 	class Quaternion;
+	class PlaneBoundedVolume;
 }
 
 #include "..\MemoryAllocator\MemoryAllocatorConfig.h"

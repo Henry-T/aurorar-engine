@@ -14,7 +14,7 @@
 
 namespace Aurora
 {
-    class LogManager : public Singleton<LogManager>, public DefaultAlloc
+    class LogManager : public Singleton<LogManager>, public GeneralAllocatedObject
     {
 	protected:
 		typedef map<String, Log*>::type	LogList;

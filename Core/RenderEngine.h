@@ -10,7 +10,7 @@
 
 namespace Aurora
 {
-	class CORE_API RenderEngine : public DefaultAlloc
+	class CORE_API RenderEngine : public GeneralAllocatedObject
 	{
 	public:
 		RenderEngine(void);

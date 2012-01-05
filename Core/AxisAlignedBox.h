@@ -97,7 +97,7 @@ namespace Aurora
 		~AxisAlignedBox()
 		{
 			if (mpCorners)
-				OGRE_FREE(mpCorners, MEMCATEGORY_SCENE_CONTROL);
+				NED_FREE(mpCorners, MEMCATEGORY_SCENE_CONTROL);
 		}
 
 		inline const Vector3& getMinimum(void) const
@@ -244,7 +244,7 @@ namespace Aurora
 			//   around face (looking onto the face)
 			// Only for optimization/compatibility.
 			if (!mpCorners)
-				mpCorners = OGRE_ALLOC_T(Vector3, 8, MEMCATEGORY_SCENE_CONTROL);
+				mpCorners = NED_ALLOC_T(Vector3, 8, MEMCATEGORY_SCENE_CONTROL);
 
 			mpCorners[0] = mMinimum;
 			mpCorners[1].x = mMinimum.x; mpCorners[1].y = mMaximum.y; mpCorners[1].z = mMinimum.z;
