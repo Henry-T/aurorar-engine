@@ -174,6 +174,10 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\AxisAlignedBox.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\dllmain.cpp"
 				>
 				<FileConfiguration
@@ -208,7 +212,35 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Math.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Matrix3.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Matrix4.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Plane.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Quaternion.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Ray.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\RenderEngine.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sphere.cpp"
 				>
 			</File>
 			<File
@@ -235,12 +267,32 @@
 				RelativePath=".\String.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\Vector2.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vector3.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Vector4.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Í·ÎÄ¼þ"
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\asm_math.h"
+				>
+			</File>
+			<File
+				RelativePath=".\AxisAlignedBox.h"
+				>
+			</File>
 			<File
 				RelativePath=".\Core.h"
 				>
@@ -258,7 +310,35 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Math.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Matrix3.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Matrix4.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Plane.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Platform.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Prerequisites.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Quaternion.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Ray.h"
 				>
 			</File>
 			<File
@@ -270,7 +350,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Sphere.h"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\StdHeaders.h"
 				>
 			</File>
 			<File
@@ -279,6 +367,18 @@
 			</File>
 			<File
 				RelativePath=".\targetver.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vector2.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vector3.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vector4.h"
 				>
 			</File>
 		</Filter>

@@ -1,14 +1,9 @@
 #pragma once
 
-#include <string>
+#include "StdHeaders.h"
 #include "..\MemoryAllocator\MemoryNedPooling.h"
 #include "..\MemoryAllocator\STLAllocator.h"
-#include <deque>
-#include <vector>
-#include <list>
-#include <set>
-#include <map>
-#include <sstream>
+#include "Platform.h"
 
 #define UNICODE 0
 #define USE_NED_MEM_ALLOC 1
@@ -211,6 +206,20 @@ namespace Aurora
 	class Exception;
 	class ExceptionFactory;
 	class StringUtil;
+	class Radian;
+	class Degree;
+	class Angle;
+	class Vector2;
+	class Vector3;
+	class Vector4;
+	class Ray;
+	class Plane;
+	class Sphere;
+	class AxisAlignedBox;
+	class Math;
+	class Matrix3;
+	class Matrix4;
+	class Quaternion;
 }
 
 #include "..\MemoryAllocator\MemoryAllocatorConfig.h"
