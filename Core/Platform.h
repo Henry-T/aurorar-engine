@@ -35,3 +35,12 @@ typedef unsigned char		uchar;
 typedef unsigned short		ushort;
 typedef unsigned int		uint;
 typedef unsigned long		ulong;
+
+#define ENDIAN_LITTLE 1
+#define ENDIAN_BIG 2
+
+#ifdef CONFIG_BIG_ENDIAN
+#    define ENDIAN ENDIAN_BIG
+#else
+#    define ENDIAN ENDIAN_LITTLE
+#endif
