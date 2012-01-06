@@ -94,7 +94,7 @@
 			OutputDirectory="..\Bin\Release"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
-			CharacterSet="1"
+			CharacterSet="2"
 			WholeProgramOptimization="1"
 			>
 			<Tool
@@ -198,6 +198,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\DX9Mapping.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\DX9RenderEngine.cpp"
 				>
 			</File>
@@ -227,6 +231,10 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\DX9Mapping.h"
+				>
+			</File>
 			<File
 				RelativePath=".\DX9RenderEngine.h"
 				>

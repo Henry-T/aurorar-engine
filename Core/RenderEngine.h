@@ -7,6 +7,7 @@
 *********************************************************************/
 #pragma once
 #include "..\MemoryAllocator\MemoryAllocatorConfig.h"
+#include "RenderDeviceCaps.h"
 
 namespace Aurora
 {
@@ -15,6 +16,18 @@ namespace Aurora
 	public:
 		RenderEngine(void);
 		virtual ~RenderEngine(void);
+
+
+		// 初始化渲染设备
+		virtual bool InitRenderDeivce(HWND hWnd) = 0;
+
+		// 通过具体的底层API 获取渲染设备能力参数
+		virtual void GetRenderDeviceCaps() = 0;
+
+
+
+	protected:
+		RenderDeviceCaps m_Caps;
 	};
 }
 

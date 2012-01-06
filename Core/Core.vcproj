@@ -208,6 +208,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\FrameBuffer.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Log.cpp"
 				>
 			</File>
@@ -240,6 +244,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\RenderState.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.cpp"
 				>
 				<FileConfiguration
@@ -261,6 +269,10 @@
 			</File>
 			<File
 				RelativePath=".\String.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Texture.cpp"
 				>
 			</File>
 			<File
@@ -286,19 +298,7 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\asm_math.h"
-				>
-			</File>
-			<File
-				RelativePath=".\AxisAlignedBox.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Bitwise.h"
-				>
-			</File>
-			<File
-				RelativePath=".\ColourValue.h"
+				RelativePath=".\BlendMode.h"
 				>
 			</File>
 			<File
@@ -310,6 +310,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\FrameBuffer.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Log.h"
 				>
 			</File>
@@ -318,23 +322,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Math.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Matrix3.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Matrix4.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Plane.h"
-				>
-			</File>
-			<File
-				RelativePath=".\PlaneBoundedVolume.h"
+				RelativePath=".\PixelFormat.h"
 				>
 			</File>
 			<File
@@ -346,11 +334,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Quaternion.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Ray.h"
+				RelativePath=".\RenderDeviceCaps.h"
 				>
 			</File>
 			<File
@@ -358,11 +342,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Singleton.h"
+				RelativePath=".\RenderSettings.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Sphere.h"
+				RelativePath=".\RenderState.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Singleton.h"
 				>
 			</File>
 			<File
@@ -382,21 +370,81 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Texture.h"
+				>
+			</File>
+			<File
+				RelativePath=".\TextureRenderState.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Timer.h"
 				>
 			</File>
-			<File
-				RelativePath=".\Vector2.h"
+			<Filter
+				Name="Math"
 				>
-			</File>
-			<File
-				RelativePath=".\Vector3.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Vector4.h"
-				>
-			</File>
+				<File
+					RelativePath=".\asm_math.h"
+					>
+				</File>
+				<File
+					RelativePath=".\AxisAlignedBox.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Bitwise.h"
+					>
+				</File>
+				<File
+					RelativePath=".\ColourValue.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Math.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Matrix3.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Matrix4.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Plane.h"
+					>
+				</File>
+				<File
+					RelativePath=".\PlaneBoundedVolume.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Quaternion.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Ray.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Sphere.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Vector2.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Vector3.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Vector4.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 	</Files>
 	<Globals>

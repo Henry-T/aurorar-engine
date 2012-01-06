@@ -15,6 +15,10 @@ namespace Aurora
 	public:
 		DX9RenderEngine(void);
 		~DX9RenderEngine(void);
+
+		virtual bool InitRenderDeivce(HWND hWnd) { return true; }
+
+		virtual void GetRenderDeviceCaps() {}
 	};
 
 }
