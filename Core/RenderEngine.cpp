@@ -3,7 +3,7 @@
 
 namespace Aurora
 {
-	RenderEngine::RenderEngine(void)
+	RenderEngine::RenderEngine(void) : m_bNvPerfHUDEnabled(false)
 	{
 	}
 

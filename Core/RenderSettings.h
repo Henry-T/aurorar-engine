@@ -13,13 +13,13 @@ namespace Aurora
 	struct RenderSettings
 	{
 		bool			full_screen;
-		unsigned int	left, top, width, height;
-		unsigned int	sample_count;
-		unsigned int	sample_quality;
-		unsigned int	sync_interval;
-
+		int				left, top, width, height;
+		int				sample_count;
+		int				sample_quality;
 		PixelFormat		color_fmt;
 		PixelFormat		depth_stencil_fmt;
+
+		HWND			hWnd;
 
 		void			SetToDefault()
 		{
@@ -29,7 +29,6 @@ namespace Aurora
 			height				= 600;
 			sample_count		= 1;
 			sample_quality		= 0;
-			sync_interval		= 0;
 			color_fmt			= PF_A8R8G8B8;
 			depth_stencil_fmt	= PF_D24S8;
 		}

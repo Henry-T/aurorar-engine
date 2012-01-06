@@ -230,4 +230,5 @@ namespace Aurora
 	class Bitwise;
 	class Timer;
 	class ColourValue;
+	class RenderSettings;
 }

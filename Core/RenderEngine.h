@@ -6,8 +6,8 @@
 	文件作用:	渲染功能接口，具体实现在API插件的派生类中
 *********************************************************************/
 #pragma once
-#include "..\MemoryAllocator\MemoryAllocatorConfig.h"
-#include "RenderDeviceCaps.h"
+#include "Prerequisites.h"
+#include "RenderSettings.h"
 
 namespace Aurora
 {
@@ -19,15 +19,22 @@ namespace Aurora
 
 
 		// 初始化渲染设备
-		virtual bool InitRenderDeivce(HWND hWnd) = 0;
+		virtual bool	InitRenderDeivce(RenderSettings& settings) = 0;
 
-		// 通过具体的底层API 获取渲染设备能力参数
-		virtual void GetRenderDeviceCaps() = 0;
+		virtual bool	BeginFrame() = 0;
 
+		virtual bool	EndFrame() = 0;
 
+		virtual bool	RenderOneFrame() = 0;
+
+		bool			IsNvPerfHUDEnable() const { return m_bNvPerfHUDEnabled; }
+
+		void			SetNvPerfHUDEnable(bool enable) { m_bNvPerfHUDEnabled = enable; }
 
 	protected:
-		RenderDeviceCaps m_Caps;
+		bool			m_bNvPerfHUDEnabled;
+
+		RenderSettings	m_Settings;
 	};
 }
 
