@@ -334,10 +334,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\RenderDeviceCaps.h"
-				>
-			</File>
-			<File
 				RelativePath=".\RenderEngine.h"
 				>
 			</File>

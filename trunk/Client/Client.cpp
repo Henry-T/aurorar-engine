@@ -5,6 +5,7 @@
 #include "Client.h"
 #include "..\DX9Renderer\DX9RenderEngine.h"
 #include "..\Common\WheatyExceptionReport.h"
+#include "..\Core\RenderSettings.h"
 
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
@@ -27,26 +28,34 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 	return RegisterClassEx(&wcex);
 }
 
+Aurora::RenderEngine* re;
+
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
-   HWND hWnd;
+	HWND hWnd;
 
-   hInst = hInstance; // 将实例句柄存储在全局变量中
+	hInst = hInstance; // 将实例句柄存储在全局变量中
 
-   hWnd = CreateWindow(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, NULL, NULL, hInstance, NULL);
+	hWnd = CreateWindow(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+		0, 0, 800, 600, NULL, NULL, hInstance, NULL);
 
-   if (!hWnd)
-   {
-      return FALSE;
-   }
+	if (!hWnd)
+	{
+		return FALSE;
+	}
 
-   ShowWindow(hWnd, nCmdShow);
-   UpdateWindow(hWnd);
+	ShowWindow(hWnd, nCmdShow);
+	UpdateWindow(hWnd);
 
-   Aurora::RenderEngine* re = new Aurora::DX9RenderEngine;
+	re = new Aurora::DX9RenderEngine;
 
-   return TRUE;
+	Aurora::RenderSettings settings;
+	settings.SetToDefault();
+	settings.hWnd = hWnd;
+	re->SetNvPerfHUDEnable(true);
+	re->InitRenderDeivce(settings);
+
+	return TRUE;
 }
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -130,15 +139,7 @@ int RunMainLoop(HACCEL& hAccelTable)
 			}
 			else
 			{
-				class Fuck
-				{
-				public:
-					int* x;
-				};
-
-				Fuck* fuck;
-
-				int y = *(fuck->x);
+				re->RenderOneFrame();
 			}
 		}
 	}
