@@ -178,6 +178,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\ColourValue.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\dllmain.cpp"
 				>
 				<FileConfiguration
@@ -291,6 +295,10 @@
 			</File>
 			<File
 				RelativePath=".\Bitwise.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ColourValue.h"
 				>
 			</File>
 			<File

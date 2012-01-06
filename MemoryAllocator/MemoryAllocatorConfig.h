@@ -65,7 +65,7 @@ namespace Aurora
 #ifdef _DEBUG
 #	define NED_MALLOC(bytes, category)									::Aurora::CategorisedAllocPolicy<category>::allocateBytes(bytes, __FILE__, __LINE__, __FUNCTION__)
 #	define NED_ALLOC_T(T, count, category)								static_cast<T*>(::Aurora::CategorisedAllocPolicy<category>::allocateBytes(sizeof(T)*(count), __FILE__, __LINE__, __FUNCTION__))
-#	define NED_FREE(ptr, category)										::Aurora::CategorisedAllocPolicy<ptr>::deallocateBytes((void*)ptr)
+#	define NED_FREE(ptr, category)										::Aurora::CategorisedAllocPolicy<category>::deallocateBytes((void*)ptr)
 
 #	define NED_NEW_T(T, category)										new (::Aurora::CategorisedAllocPolicy<category>::allocateBytes(sizeof(T), __FILE__, __LINE__, __FUNCTION__)) T
 #	define NED_NEW_ARRAY_T(T, count, category)							::Aurora::constructN(static_cast<T*>(::Aurora::CategorisedAllocPolicy<category>::allocateBytes(sizeof(T)*(count), __FILE__, __LINE__, __FUNCTION__)), count) 

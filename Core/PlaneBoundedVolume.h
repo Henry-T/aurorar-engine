@@ -1,6 +1,13 @@
+/********************************************************************
+	创建时间:	6:1:2012   0:27
+	文件名	:	PlaneBoundedVolume
+	创建者:		丁亮
+	
+	文件作用:	由面组成的凸面体
+*********************************************************************/
+
 #pragma once
 
-// Precompiler options
 #include "Prerequisites.h"
 #include "AxisAlignedBox.h"
 #include "Sphere.h"
