@@ -42,10 +42,9 @@ namespace Aurora
 		m_DeviceType	   = D3DDEVTYPE_HAL;						
 
 
-		D3DADAPTER_IDENTIFIER9 adapterIdentifier;
-
 		if (IsNvPerfHUDEnable())
 		{
+			int x = m_pD3D->GetAdapterCount();
 			for (UINT adapter=0; adapter < m_pD3D->GetAdapterCount(); ++adapter)
 			{
 				m_pD3D->GetAdapterIdentifier( adapter, 0, &m_AdapterIdentifier );
@@ -113,7 +112,7 @@ namespace Aurora
 
 	}
 
-	bool DX9RenderEngine::BeginFrame()
+	bool DX9RenderEngine::_BeginFrame()
 	{
 		if (FAILED(m_pDevice->BeginScene()))
 		{
@@ -122,7 +121,7 @@ namespace Aurora
 		return true;
 	}
 
-	bool DX9RenderEngine::EndFrame()
+	bool DX9RenderEngine::_EndFrame()
 	{
 		if (FAILED(m_pDevice->EndScene()))
 		{
@@ -133,7 +132,7 @@ namespace Aurora
 
 	bool DX9RenderEngine::RenderOneFrame()
 	{
-		if (!BeginFrame())
+		if (!_BeginFrame())
 		{
 			return false;
 		}
@@ -143,10 +142,13 @@ namespace Aurora
 			return false;
 		}
 
-		if (!EndFrame())
+		if (!_EndFrame())
 		{
 			return false;
 		}
+
+
+		return true;
 	}
 
 	bool DX9RenderEngine::_DoRender()

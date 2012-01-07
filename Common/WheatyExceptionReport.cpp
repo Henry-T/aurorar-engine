@@ -12,6 +12,9 @@
 
 #pragma comment(linker, "/defaultlib:dbghelp.lib")
 
+#  pragma warning (push)
+#pragma warning(disable:4996)
+
 //============================== Global Variables =============================
 
 //
@@ -690,3 +693,5 @@ int __cdecl WheatyExceptionReport::_tprintf(const TCHAR * format, ...)
 
     return retValue;
 }
+
+#pragma warning (pop)

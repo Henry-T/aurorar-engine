@@ -16,3 +16,5 @@
 // TODO: 在此处引用程序需要的其他头文件
 #include "DX9Renderer.h"
 #include "..\Core\Core.h"
+
+#pragma warning(disable:4305)
