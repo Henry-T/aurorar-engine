@@ -20,15 +20,14 @@ namespace Aurora
 
 		const D3DCAPS9&			GetRenderDeviceCaps() const { return m_Caps; }
 
-		bool					BeginFrame();
-
-		bool					EndFrame();
-
+		
 		bool					RenderOneFrame();
 
-		
-
 	private:
+
+		bool					_BeginFrame();
+
+		bool					_EndFrame();
 
 		bool					_DoRender();
 
