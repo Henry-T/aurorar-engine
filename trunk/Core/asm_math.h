@@ -13,6 +13,7 @@
 #  pragma warning (push)
 // disable "instruction may be inaccurate on some Pentiums"
 #  pragma warning (disable : 4725)
+#  pragma warning (disable : 4244)
 
 namespace Aurora
 {
