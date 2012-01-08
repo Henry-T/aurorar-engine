@@ -178,6 +178,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\BoneWeightBuffer.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\ColourValue.cpp"
 				>
 			</File>
@@ -209,6 +213,14 @@
 			</File>
 			<File
 				RelativePath=".\FrameBuffer.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\GeometryBuffer.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\GraphicsBuffer.cpp"
 				>
 			</File>
 			<File
@@ -248,6 +260,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Resource.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.cpp"
 				>
 				<FileConfiguration
@@ -276,6 +292,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\TextureCoordBuffer.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Timer.cpp"
 				>
 			</File>
@@ -289,6 +309,10 @@
 			</File>
 			<File
 				RelativePath=".\Vector4.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\VertexDeclaration.cpp"
 				>
 			</File>
 		</Filter>
@@ -438,6 +462,42 @@
 				</File>
 				<File
 					RelativePath=".\Vector4.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="MultiStream"
+				>
+				<File
+					RelativePath=".\BoneWeightBuffer.h"
+					>
+				</File>
+				<File
+					RelativePath=".\GeometryBuffer.h"
+					>
+				</File>
+				<File
+					RelativePath=".\GraphicsBuffer.h"
+					>
+				</File>
+				<File
+					RelativePath=".\MultiStream.h"
+					>
+				</File>
+				<File
+					RelativePath=".\TextureCoordBuffer.h"
+					>
+				</File>
+				<File
+					RelativePath=".\VertexDeclaration.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Resource"
+				>
+				<File
+					RelativePath=".\Resource.h"
 					>
 				</File>
 			</Filter>

@@ -11,6 +11,7 @@
 #include "..\MemoryAllocator\MemoryAllocatorConfig.h"
 #include "..\MemoryAllocator\STLAllocator.h"
 #include "Platform.h"
+#include "boost/shared_ptr.hpp"
 
 #define USE_NED_MEM_ALLOC 1
 
@@ -231,4 +232,10 @@ namespace Aurora
 	class Timer;
 	class ColourValue;
 	struct RenderSettings;
+	class GeometryBuffer;
+	class TextureCoordBuffer;
+	class BoneWeightBuffer;
+	class GraphicsBuffer;
+	class VertexDeclaration;
+	class Resource;
 }
