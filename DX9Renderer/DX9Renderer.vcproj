@@ -208,6 +208,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DX9VertexDeclaration.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.cpp"
 				>
 				<FileConfiguration
@@ -243,6 +247,10 @@
 			</File>
 			<File
 				RelativePath=".\DX9Renderer.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DX9VertexDeclaration.h"
 				>
 			</File>
 			<File

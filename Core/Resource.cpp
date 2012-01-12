@@ -11,9 +11,4 @@ namespace Aurora
 	{
 	}
 
-	const String& Aurora::Resource::GetName() const
-	{
-		return m_szName;
-	}
-
 }
