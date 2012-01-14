@@ -264,6 +264,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\ResourceManager.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.cpp"
 				>
 				<FileConfiguration
@@ -367,6 +371,10 @@
 			</File>
 			<File
 				RelativePath=".\RenderState.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ResourceManager.h"
 				>
 			</File>
 			<File
@@ -500,10 +508,6 @@
 					RelativePath=".\Resource.h"
 					>
 				</File>
-			</Filter>
-			<Filter
-				Name="ResourceSystem"
-				>
 			</Filter>
 		</Filter>
 	</Files>
