@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "FBXLoader.h"
 #include "fbxsdk.h"
 
@@ -14,6 +15,13 @@ LogManager& FBXLoader::getSingleton(void)
 }
 //-----------------------------------------------------------------------
 
+
+void initialize()
+{
+	KFbxGlobalSettings setting = KFbxScene::GetGlobalSettings();
+	
+
+}
 
 int FBXLoader::LoadContent( String file)
 {
