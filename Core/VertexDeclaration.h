@@ -44,7 +44,7 @@ namespace Aurora
 		VET_MAX
 	};
 
-	struct CORE_API VertexElement : public GeneralAllocatedObject
+	struct CORE_API VertexElement : public ResourceAllocatedObject
 	{
 		ushort					mSource;
 		size_t					mOffset;
@@ -64,7 +64,7 @@ namespace Aurora
 
 		bool					operator == (const VertexElement& rhs) const;
 
-		// 为了可以用list的排序
+		// 为了可以用list的排序 只能用于保存对象时
 		bool					operator <	(const VertexElement& rhs) const;
 	};
 
@@ -97,8 +97,6 @@ namespace Aurora
 		bool				operator == (const VertexDeclaration& rhs) const;
 
 		bool				operator != (const VertexDeclaration& rhs) const;
-
-		virtual bool		MakeAPIObject() = 0;
 
 	protected:
 		VertexElementList	mElementList;
