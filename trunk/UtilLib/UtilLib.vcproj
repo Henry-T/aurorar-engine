@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../Dependencies/boost;../Common"
+				AdditionalIncludeDirectories="../Dependencies/boost;../Common;./"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;UTILLIB_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -233,10 +233,6 @@
 				RelativePath=".\Timer.cpp"
 				>
 			</File>
-			<File
-				RelativePath=".\UtilLib.cpp"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="Í·ÎÄ¼þ"
@@ -293,10 +289,6 @@
 			>
 			<File
 				RelativePath="..\Common\Platform.h"
-				>
-			</File>
-			<File
-				RelativePath="..\Common\StdDefine.h"
 				>
 			</File>
 			<File
