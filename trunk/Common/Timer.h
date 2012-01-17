@@ -20,7 +20,7 @@
 namespace Aurora
 {
 
-	class CORE_API Timer : public GeneralAllocatedObject
+	class Timer : public GeneralAllocatedObject
     {
     private:
 		clock_t mZeroClock;

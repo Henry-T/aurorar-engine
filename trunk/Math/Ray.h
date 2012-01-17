@@ -15,7 +15,7 @@
 namespace Aurora 
 {
 
-    class CORE_API Ray
+    class MATH_API Ray
     {
     protected:
         Vector3 mOrigin;

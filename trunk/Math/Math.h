@@ -12,7 +12,7 @@
 
 namespace Aurora
 {
-	class CORE_API Radian
+	class MATH_API Radian
 	{
 		Real mRad;
 
@@ -50,7 +50,7 @@ namespace Aurora
 		bool operator >= ( const Radian& r ) const { return mRad >= r.mRad; }
 		bool operator >  ( const Radian& r ) const { return mRad >  r.mRad; }
 
-		inline CORE_API friend std::ostream& operator <<
+		inline MATH_API friend std::ostream& operator <<
 			( std::ostream& o, const Radian& v )
 		{
 			o << "Radian(" << v.valueRadians() << ")";
@@ -58,7 +58,7 @@ namespace Aurora
 		}
 	};
 
-	class CORE_API Degree
+	class MATH_API Degree
 	{
 		Real mDeg; // if you get an error here - make sure to define/typedef 'Real' first
 
@@ -96,7 +96,7 @@ namespace Aurora
 		bool operator >= ( const Degree& d ) const { return mDeg >= d.mDeg; }
 		bool operator >  ( const Degree& d ) const { return mDeg >  d.mDeg; }
 
-		inline CORE_API friend std::ostream& operator <<
+		inline MATH_API friend std::ostream& operator <<
 			( std::ostream& o, const Degree& v )
 		{
 			o << "Degree(" << v.valueDegrees() << ")";
@@ -104,7 +104,7 @@ namespace Aurora
 		}
 	};
 
-	class CORE_API Angle
+	class MATH_API Angle
 	{
 		Real mAngle;
 	public:
@@ -133,7 +133,7 @@ namespace Aurora
 		return *this;
 	}
 
-	class CORE_API Math 
+	class MATH_API Math 
 	{
 	public:
 		enum AngleUnit

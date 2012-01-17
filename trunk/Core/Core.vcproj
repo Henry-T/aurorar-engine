@@ -174,41 +174,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\AxisAlignedBox.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\BoneWeightBuffer.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\ColourValue.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\dllmain.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
-						CompileAsManaged="0"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
-						CompileAsManaged="0"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath=".\Exception.cpp"
 				>
 			</File>
 			<File
@@ -221,34 +191,6 @@
 			</File>
 			<File
 				RelativePath=".\GraphicsBuffer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Log.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\LogManager.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Math.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Matrix3.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Matrix4.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Plane.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Quaternion.cpp"
 				>
 			</File>
 			<File
@@ -268,51 +210,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\stdafx.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath=".\String.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\Texture.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\TextureCoordBuffer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Timer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Vector2.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Vector3.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Vector4.cpp"
 				>
 			</File>
 			<File
@@ -330,11 +232,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Core.h"
+				RelativePath=".\ColourValue.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Exception.h"
+				RelativePath=".\Core.h"
 				>
 			</File>
 			<File
@@ -342,19 +244,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Log.h"
-				>
-			</File>
-			<File
-				RelativePath=".\LogManager.h"
-				>
-			</File>
-			<File
 				RelativePath=".\PixelFormat.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Platform.h"
 				>
 			</File>
 			<File
@@ -378,26 +268,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Singleton.h"
-				>
-			</File>
-			<File
-				RelativePath=".\stdafx.h"
-				>
-			</File>
-			<File
-				RelativePath=".\StdHeaders.h"
-				>
-			</File>
-			<File
-				RelativePath=".\String.h"
-				>
-			</File>
-			<File
-				RelativePath=".\targetver.h"
-				>
-			</File>
-			<File
 				RelativePath=".\Texture.h"
 				>
 			</File>
@@ -405,74 +275,6 @@
 				RelativePath=".\TextureRenderState.h"
 				>
 			</File>
-			<File
-				RelativePath=".\Timer.h"
-				>
-			</File>
-			<Filter
-				Name="Math"
-				>
-				<File
-					RelativePath=".\asm_math.h"
-					>
-				</File>
-				<File
-					RelativePath=".\AxisAlignedBox.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Bitwise.h"
-					>
-				</File>
-				<File
-					RelativePath=".\ColourValue.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Math.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Matrix3.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Matrix4.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Plane.h"
-					>
-				</File>
-				<File
-					RelativePath=".\PlaneBoundedVolume.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Quaternion.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Ray.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Sphere.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Vector2.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Vector3.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Vector4.h"
-					>
-				</File>
-			</Filter>
 			<Filter
 				Name="MultiStream"
 				>
@@ -510,6 +312,60 @@
 				</File>
 			</Filter>
 		</Filter>
+		<Filter
+			Name="PCH"
+			>
+			<File
+				RelativePath=".\stdafx.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\stdafx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\targetver.h"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\dllmain.cpp"
+			>
+			<FileConfiguration
+				Name="Debug|Win32"
+				>
+				<Tool
+					Name="VCCLCompilerTool"
+					UsePrecompiledHeader="0"
+					CompileAsManaged="0"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				>
+				<Tool
+					Name="VCCLCompilerTool"
+					UsePrecompiledHeader="0"
+					CompileAsManaged="0"
+				/>
+			</FileConfiguration>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>

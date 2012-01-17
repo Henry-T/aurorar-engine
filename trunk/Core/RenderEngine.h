@@ -11,31 +11,31 @@
 
 namespace Aurora
 {
-	class CORE_API RenderEngine : public GeneralAllocatedObject
-	{
-	public:
-		RenderEngine(void);
-		virtual ~RenderEngine(void);
-
-
-		// 初始化渲染设备
-		virtual bool	InitRenderDeivce(RenderSettings& settings) = 0;
-		
-		virtual bool	RenderOneFrame() = 0;
-
-		bool			IsNvPerfHUDEnable() const { return m_bNvPerfHUDEnabled; }
-
-		void			SetNvPerfHUDEnable(bool enable) { m_bNvPerfHUDEnabled = enable; }
-
-	protected:
-
-		virtual bool	_BeginFrame() = 0;
-
-		virtual bool	_EndFrame() = 0;
-
-		bool			m_bNvPerfHUDEnabled;
-
-		RenderSettings	m_Settings;
-	};
+ 	class CORE_API RenderEngine : public GeneralAllocatedObject
+ 	{
+ 	public:
+ 		RenderEngine(void);
+ 		virtual ~RenderEngine(void);
+ 
+ 
+ 		// 初始化渲染设备
+ 		virtual bool	InitRenderDeivce(RenderSettings& settings) = 0;
+ 		
+ 		virtual bool	RenderOneFrame() = 0;
+ 
+ 		bool			IsNvPerfHUDEnable() const { return m_bNvPerfHUDEnabled; }
+ 
+ 		void			SetNvPerfHUDEnable(bool enable) { m_bNvPerfHUDEnabled = enable; }
+ 
+ 	protected:
+ 
+ 		virtual bool	_BeginFrame() = 0;
+ 
+ 		virtual bool	_EndFrame() = 0;
+ 
+ 		bool			m_bNvPerfHUDEnabled;
+ 
+ 		RenderSettings	m_Settings;
+ 	};
 }
 

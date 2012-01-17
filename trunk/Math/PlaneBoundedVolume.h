@@ -17,7 +17,7 @@
 namespace Aurora 
 {
 
-    class CORE_API PlaneBoundedVolume
+    class MATH_API PlaneBoundedVolume
     {
     public:
         typedef vector<Plane>::type PlaneList;

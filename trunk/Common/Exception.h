@@ -14,7 +14,7 @@
 
 namespace Aurora
 {
-	class CORE_API Exception : public std::exception
+	class Exception : public std::exception
     {
     protected:
         long line;
@@ -73,55 +73,55 @@ namespace Aurora
 		enum { number = num };
 	};
 
-	class CORE_API UnimplementedException : public Exception 
+	class UnimplementedException : public Exception 
 	{
 	public:
 		UnimplementedException(int inNumber, const String& inDescription, const String& inSource, const char* inFile, long inLine)
 			: Exception(inNumber, inDescription, inSource, "UnimplementedException", inFile, inLine) {}
 	};
-	class CORE_API FileNotFoundException : public Exception
+	class FileNotFoundException : public Exception
 	{
 	public:
 		FileNotFoundException(int inNumber, const String& inDescription, const String& inSource, const char* inFile, long inLine)
 			: Exception(inNumber, inDescription, inSource, "FileNotFoundException", inFile, inLine) {}
 	};
-	class CORE_API IOException : public Exception
+	class IOException : public Exception
 	{
 	public:
 		IOException(int inNumber, const String& inDescription, const String& inSource, const char* inFile, long inLine)
 			: Exception(inNumber, inDescription, inSource, "IOException", inFile, inLine) {}
 	};
-	class CORE_API InvalidStateException : public Exception
+	class InvalidStateException : public Exception
 	{
 	public:
 		InvalidStateException(int inNumber, const String& inDescription, const String& inSource, const char* inFile, long inLine)
 			: Exception(inNumber, inDescription, inSource, "InvalidStateException", inFile, inLine) {}
 	};
-	class CORE_API InvalidParametersException : public Exception
+	class InvalidParametersException : public Exception
 	{
 	public:
 		InvalidParametersException(int inNumber, const String& inDescription, const String& inSource, const char* inFile, long inLine)
 			: Exception(inNumber, inDescription, inSource, "InvalidParametersException", inFile, inLine) {}
 	};
-	class CORE_API ItemIdentityException : public Exception
+	class ItemIdentityException : public Exception
 	{
 	public:
 		ItemIdentityException(int inNumber, const String& inDescription, const String& inSource, const char* inFile, long inLine)
 			: Exception(inNumber, inDescription, inSource, "ItemIdentityException", inFile, inLine) {}
 	};
-	class CORE_API InternalErrorException : public Exception
+	class InternalErrorException : public Exception
 	{
 	public:
 		InternalErrorException(int inNumber, const String& inDescription, const String& inSource, const char* inFile, long inLine)
 			: Exception(inNumber, inDescription, inSource, "InternalErrorException", inFile, inLine) {}
 	};
-	class CORE_API RenderingAPIException : public Exception
+	class RenderingAPIException : public Exception
 	{
 	public:
 		RenderingAPIException(int inNumber, const String& inDescription, const String& inSource, const char* inFile, long inLine)
 			: Exception(inNumber, inDescription, inSource, "RenderingAPIException", inFile, inLine) {}
 	};
-	class CORE_API RuntimeAssertionException : public Exception
+	class RuntimeAssertionException : public Exception
 	{
 	public:
 		RuntimeAssertionException(int inNumber, const String& inDescription, const String& inSource, const char* inFile, long inLine)

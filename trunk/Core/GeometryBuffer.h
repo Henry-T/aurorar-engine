@@ -8,7 +8,7 @@
 
 #pragma once
 #include "Prerequisites.h"
-#include "Vector3.h"
+#include "../Math/Vector3.h"
 #include "ColourValue.h"
 
 

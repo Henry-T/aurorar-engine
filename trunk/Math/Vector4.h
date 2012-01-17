@@ -13,7 +13,7 @@
 namespace Aurora
 {
 
-    class CORE_API Vector4
+    class MATH_API Vector4
     {
     public:
         Real x, y, z, w;
@@ -351,7 +351,7 @@ namespace Aurora
 			return Math::isNaN(x) || Math::isNaN(y) || Math::isNaN(z) || Math::isNaN(w);
 		}
 
-        inline CORE_API friend std::ostream& operator <<
+        inline MATH_API friend std::ostream& operator <<
             ( std::ostream& o, const Vector4& v )
         {
             o << "Vector4(" << v.x << ", " << v.y << ", " << v.z << ", " << v.w << ")";

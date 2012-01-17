@@ -8,7 +8,7 @@
 
 #pragma once
 #include "Prerequisites.h"
-#include "Vector4.h"
+#include "../Math/Vector4.h"
 
 namespace Aurora
 {

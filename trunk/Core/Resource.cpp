@@ -18,12 +18,12 @@ namespace Aurora
 
 	bool Resource::LessFunctionInMemory( const Resource& e1, const Resource& e2 )
 	{
-
+		return true;
 	}
 
 	bool Resource::LessFunctionInCache( const Resource& e1, const Resource& e2 )
 	{
-
+		return true;
 	}
 
 }

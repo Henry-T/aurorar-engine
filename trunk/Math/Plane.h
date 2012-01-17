@@ -13,7 +13,7 @@
 namespace Aurora
 {
 
-    class CORE_API Plane
+    class MATH_API Plane
     {
     public:
   
@@ -64,7 +64,7 @@ namespace Aurora
             return (rhs.d != d && rhs.normal != normal);
         }
 
-        CORE_API friend std::ostream& operator<< (std::ostream& o, const Plane& p);
+        MATH_API friend std::ostream& operator<< (std::ostream& o, const Plane& p);
     };
 
     typedef vector<Plane>::type PlaneList;

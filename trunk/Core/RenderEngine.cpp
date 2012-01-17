@@ -3,12 +3,12 @@
 
 namespace Aurora
 {
-	RenderEngine::RenderEngine(void) : m_bNvPerfHUDEnabled(false)
-	{
-	}
-
-	RenderEngine::~RenderEngine(void)
-	{
-	}
+ 	RenderEngine::RenderEngine(void) : m_bNvPerfHUDEnabled(false)
+ 	{
+ 	}
+ 
+ 	RenderEngine::~RenderEngine(void)
+ 	{
+ 	}
 }
 
