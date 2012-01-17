@@ -16,7 +16,7 @@
 namespace Aurora
 {
 
-    class CORE_API Matrix4
+    class MATH_API Matrix4
     {
     protected:
 
@@ -393,7 +393,7 @@ namespace Aurora
                 scalar*m[3][0], scalar*m[3][1], scalar*m[3][2], scalar*m[3][3]);
         }
 
-        inline CORE_API friend std::ostream& operator <<
+        inline MATH_API friend std::ostream& operator <<
             ( std::ostream& o, const Matrix4& m )
         {
             o << "Matrix4(";

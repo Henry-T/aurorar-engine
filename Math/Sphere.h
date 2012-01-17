@@ -14,7 +14,7 @@
 namespace Aurora
 {
 
-    class CORE_API Sphere
+    class MATH_API Sphere
     {
     protected:
         Real mRadius;

@@ -6,6 +6,7 @@
 	文件作用:	DX9顶点声明
 *********************************************************************/
 #pragma once
+#include "..\Core\VertexDeclaration.h"
 
 namespace Aurora
 {

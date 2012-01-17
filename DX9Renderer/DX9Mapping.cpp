@@ -1,6 +1,6 @@
 #include "StdAfx.h"
 #include "DX9Mapping.h"
-#include "..\Core\Matrix4.h"
+#include "..\Math\Matrix4.h"
 
 namespace Aurora
 {

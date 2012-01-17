@@ -13,7 +13,7 @@
 namespace Aurora 
 {
 
-    class CORE_API Quaternion
+    class MATH_API Quaternion
     {
     public:
         inline Quaternion (
@@ -113,7 +113,7 @@ namespace Aurora
         Quaternion operator- (const Quaternion& rkQ) const;
         Quaternion operator* (const Quaternion& rkQ) const;
         Quaternion operator* (Real fScalar) const;
-        CORE_API friend Quaternion operator* (Real fScalar,
+        MATH_API friend Quaternion operator* (Real fScalar,
             const Quaternion& rkQ);
         Quaternion operator- () const;
         inline bool operator== (const Quaternion& rhs) const
@@ -174,7 +174,7 @@ namespace Aurora
 			return Math::isNaN(x) || Math::isNaN(y) || Math::isNaN(z) || Math::isNaN(w);
 		}
 
-        inline CORE_API friend std::ostream& operator <<
+        inline MATH_API friend std::ostream& operator <<
             ( std::ostream& o, const Quaternion& q )
         {
             o << "Quaternion(" << q.w << ", " << q.x << ", " << q.y << ", " << q.z << ")";

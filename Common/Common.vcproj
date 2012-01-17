@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="DX9Renderer"
-	ProjectGUID="{8FFFE91C-F0AC-4341-9F50-245B4DFAD4FB}"
-	RootNamespace="DX9Renderer"
+	Name="Common"
+	ProjectGUID="{9DFA08E7-B2FE-46BE-9688-3DF6D39EC64E}"
+	RootNamespace="Common"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -18,9 +18,9 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="..\Bin\Debug"
+			OutputDirectory="..\Lib\Debug"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="2"
+			ConfigurationType="4"
 			CharacterSet="2"
 			>
 			<Tool
@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;DX9RENDERER_EXPORTS"
+				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -59,20 +59,10 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLinkerTool"
-				AdditionalDependencies="d3d9.lib d3dx9.lib dxerr.lib"
-				LinkIncremental="2"
-				AdditionalLibraryDirectories="..\Lib\Debug"
-				GenerateDebugInformation="true"
-				SubSystem="2"
-				ImportLibrary="..\Lib\Debug\$(TargetName).lib"
-				TargetMachine="1"
+				Name="VCLibrarianTool"
 			/>
 			<Tool
 				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -84,17 +74,14 @@
 				Name="VCFxCopTool"
 			/>
 			<Tool
-				Name="VCAppVerifierTool"
-			/>
-			<Tool
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="..\Bin\Release"
+			OutputDirectory="..\Lib\Release"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="2"
+			ConfigurationType="4"
 			CharacterSet="2"
 			WholeProgramOptimization="1"
 			>
@@ -117,8 +104,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories=""
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;DX9RENDERER_EXPORTS"
+				PreprocessorDefinitions="WIN32;NDEBUG;_LIB"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="2"
@@ -135,22 +121,10 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLinkerTool"
-				AdditionalDependencies="d3d9.lib d3dx9.lib dxerr.lib"
-				LinkIncremental="1"
-				AdditionalLibraryDirectories="..\Lib\Debug"
-				GenerateDebugInformation="true"
-				SubSystem="2"
-				OptimizeReferences="2"
-				EnableCOMDATFolding="2"
-				ImportLibrary="..\Lib\Release\$(TargetName).lib"
-				TargetMachine="1"
+				Name="VCLibrarianTool"
 			/>
 			<Tool
 				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -160,9 +134,6 @@
 			/>
 			<Tool
 				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCAppVerifierTool"
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
@@ -178,16 +149,44 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\DX9Mapping.cpp"
+				RelativePath=".\Exception.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\DX9RenderEngine.cpp"
+				RelativePath=".\Log.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\DX9VertexDeclaration.cpp"
+				RelativePath=".\LogManager.cpp"
 				>
+			</File>
+			<File
+				RelativePath=".\String.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Timer.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\WheatyExceptionReport.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
 			</File>
 		</Filter>
 		<Filter
@@ -196,19 +195,47 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\DX9Mapping.h"
+				RelativePath=".\Bitwise.h"
 				>
 			</File>
 			<File
-				RelativePath=".\DX9RenderEngine.h"
+				RelativePath=".\Exception.h"
 				>
 			</File>
 			<File
-				RelativePath=".\DX9Renderer.h"
+				RelativePath=".\Log.h"
 				>
 			</File>
 			<File
-				RelativePath=".\DX9VertexDeclaration.h"
+				RelativePath=".\LogManager.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Platform.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Prerequisites.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Singleton.h"
+				>
+			</File>
+			<File
+				RelativePath=".\StdHeaders.h"
+				>
+			</File>
+			<File
+				RelativePath=".\String.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Timer.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WheatyExceptionReport.h"
 				>
 			</File>
 		</Filter>
@@ -244,28 +271,6 @@
 				>
 			</File>
 		</Filter>
-		<File
-			RelativePath=".\dllmain.cpp"
-			>
-			<FileConfiguration
-				Name="Debug|Win32"
-				>
-				<Tool
-					Name="VCCLCompilerTool"
-					UsePrecompiledHeader="0"
-					CompileAsManaged="0"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="Release|Win32"
-				>
-				<Tool
-					Name="VCCLCompilerTool"
-					UsePrecompiledHeader="0"
-					CompileAsManaged="0"
-				/>
-			</FileConfiguration>
-		</File>
 	</Files>
 	<Globals>
 	</Globals>

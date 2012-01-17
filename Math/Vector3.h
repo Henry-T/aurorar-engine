@@ -13,7 +13,7 @@
 
 namespace Aurora
 {
-    class CORE_API Vector3
+    class MATH_API Vector3
     {
     public:
 		Real x, y, z;
@@ -555,7 +555,7 @@ namespace Aurora
         static const Vector3 NEGATIVE_UNIT_Z;
         static const Vector3 UNIT_SCALE;
 
-        inline CORE_API friend std::ostream& operator <<
+        inline MATH_API friend std::ostream& operator <<
             ( std::ostream& o, const Vector3& v )
         {
             o << "Vector3(" << v.x << ", " << v.y << ", " << v.z << ")";

@@ -13,7 +13,7 @@
 namespace Aurora
 {
 
-    class CORE_API Matrix3
+    class MATH_API Matrix3
     {
     public:
        
@@ -81,12 +81,12 @@ namespace Aurora
 
         Vector3 operator* (const Vector3& rkVector) const;
 
-        CORE_API friend Vector3 operator* (const Vector3& rkVector,
+        MATH_API friend Vector3 operator* (const Vector3& rkVector,
             const Matrix3& rkMatrix);
 
         Matrix3 operator* (Real fScalar) const;
 
-        CORE_API friend Matrix3 operator* (Real fScalar, const Matrix3& rkMatrix);
+        MATH_API friend Matrix3 operator* (Real fScalar, const Matrix3& rkMatrix);
 
         Matrix3 Transpose () const;
         bool Inverse (Matrix3& rkInverse, Real fTolerance = 1e-06) const;
@@ -154,7 +154,7 @@ namespace Aurora
 			return false;
 		}
 
-		inline CORE_API friend std::ostream& operator <<
+		inline MATH_API friend std::ostream& operator <<
 			( std::ostream& o, const Matrix3& m )
 		{
 			o << "Matrix3(" << m[0][0] << ", " << m[0][1] << ", " << m[0][2] << ", " 

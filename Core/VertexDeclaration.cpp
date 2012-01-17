@@ -1,6 +1,6 @@
 #include "StdAfx.h"
 #include "VertexDeclaration.h"
-#include "Exception.h"
+#include "../Common/Exception.h"
 #include "ColourValue.h"
 
 namespace Aurora

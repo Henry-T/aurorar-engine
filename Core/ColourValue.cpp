@@ -1,6 +1,6 @@
 #include "StdAfx.h"
 #include "ColourValue.h"
-#include "Math.h"
+#include "..\Math\Math.h"
 
 namespace Aurora 
 {

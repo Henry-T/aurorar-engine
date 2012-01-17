@@ -14,7 +14,7 @@
 namespace Aurora 
 {
 
-	class CORE_API AxisAlignedBox
+	class MATH_API AxisAlignedBox
 	{
 	public:
 		enum Extent
@@ -41,7 +41,8 @@ namespace Aurora
 		|/    |/
 		6-----7
 		*/
-		typedef enum {
+		typedef enum 
+		{
 			FAR_LEFT_BOTTOM = 0,
 			FAR_LEFT_TOP = 1,
 			FAR_RIGHT_TOP = 2,
@@ -51,6 +52,7 @@ namespace Aurora
 			NEAR_LEFT_TOP = 5,
 			NEAR_RIGHT_TOP = 4
 		} CornerEnum;
+
 		inline AxisAlignedBox() : mMinimum(Vector3::ZERO), mMaximum(Vector3::UNIT_SCALE), mpCorners(0)
 		{
 			// Default to a null box 
@@ -291,7 +293,7 @@ namespace Aurora
 			}
 		}
 
-		CORE_API friend std::ostream& operator<<( std::ostream& o, const AxisAlignedBox aab )
+		MATH_API friend std::ostream& operator<<( std::ostream& o, const AxisAlignedBox aab )
 		{
 			switch (aab.mExtent)
 			{

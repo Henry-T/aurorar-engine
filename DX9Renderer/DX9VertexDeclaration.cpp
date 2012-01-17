@@ -13,7 +13,7 @@ namespace Aurora
 
 	bool DX9VertexDeclaration::MakeAPIObject()
 	{
-
+		return true;
 	}
 
 }
