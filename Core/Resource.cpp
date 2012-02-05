@@ -4,16 +4,12 @@
 namespace Aurora
 {
 	Resource::Resource(void)
+		: m_bIsCatched(false)
 	{
 	}
 
 	Resource::~Resource(void)
 	{
-	}
-
-	void Resource::OnPrepare( const String& szFile )
-	{
-
 	}
 
 	bool Resource::LessFunctionInMemory( const Resource& e1, const Resource& e2 )
