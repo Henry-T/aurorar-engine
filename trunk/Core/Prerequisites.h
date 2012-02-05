@@ -21,4 +21,6 @@ namespace Aurora
 	class GraphicsBuffer;
 	class VertexDeclaration;
 	class Resource;
+	class ResourcePool;
+	class ResourceManager;
 }
