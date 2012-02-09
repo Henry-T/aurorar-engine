@@ -11,15 +11,15 @@
 
 namespace Aurora
 {
-	class CORE_API GraphicsBuffer : public GeneralAllocatedObject
+	class CORE_API GraphicsBuffer : public GeometryAllocatedObject
 	{
 	public:
 		GraphicsBuffer(void);
 		virtual ~GraphicsBuffer(void);
 
 	protected:
-		boost::shared_ptr<GeometryBuffer>		m_pGeoBuf;
-		boost::shared_ptr<TextureCoordBuffer>	m_pTexCoordBuf;
-		boost::shared_ptr<BoneWeightBuffer>		m_pBoneWeightBuf;
+		GeometryBufferPtr		m_pGeoBuf;
+		TextureCoordBufferPtr	m_pTexCoordBuf;
+		BoneWeightBufferPtr		m_pBoneWeightBuf;
 	};
 }

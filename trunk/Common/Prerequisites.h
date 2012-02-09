@@ -15,6 +15,8 @@
 
 #define USE_NED_MEM_ALLOC 1
 
+#define interface struct
+
 namespace Aurora
 {
 #if USE_NED_MEM_ALLOC
@@ -215,3 +217,15 @@ namespace Aurora
 	class Bitwise;
 	class Timer;
 }
+
+namespace Aurora
+{
+	typedef boost::shared_ptr<Log>				LogPtr;
+	typedef boost::shared_ptr<LogManager>		LogManagerPtr;
+	typedef boost::shared_ptr<Exception>		ExceptionPtr;
+	typedef boost::shared_ptr<ExceptionFactory> ExceptionFactoryPtr;
+	typedef boost::shared_ptr<StringUtil>		StringUtilPtr;
+	typedef boost::shared_ptr<Bitwise>			BitwisePtr;
+	typedef boost::shared_ptr<Timer>			TimerPtr;
+}
+
