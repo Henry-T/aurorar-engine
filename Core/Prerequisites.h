@@ -10,6 +10,8 @@
 #include "../Common/Prerequisites.h"
 #include "../Math/Prerequisites.h"
 
+
+
 namespace Aurora
 {
 	class RenderEngine;
@@ -21,6 +23,44 @@ namespace Aurora
 	class GraphicsBuffer;
 	class VertexDeclaration;
 	class Resource;
-	class ResourcePool;
 	class ResourceManager;
+	class Texture;
+	class SubMesh;
+	class Mesh;
+
+	class Model;
+	struct NextGenTextureDesc;
+	struct LightMapDesc;
+
+	interface IRenderable;
+
+	interface IMovable;
+
+	class IndexBuffer;
+}
+
+namespace Aurora
+{
+	typedef boost::shared_ptr<RenderEngine>			RenderEnginePtr;
+	typedef boost::shared_ptr<ColourValue>			ColourValuePtr;
+	typedef boost::shared_ptr<RenderSettings>		RenderSettingsPtr;
+	typedef boost::shared_ptr<GeometryBuffer>		GeometryBufferPtr;
+	typedef boost::shared_ptr<TextureCoordBuffer>	TextureCoordBufferPtr;
+	typedef boost::shared_ptr<BoneWeightBuffer>		BoneWeightBufferPtr;
+	typedef boost::shared_ptr<GraphicsBuffer>		GraphicsBufferPtr;
+	typedef boost::shared_ptr<VertexDeclaration>	VertexDeclarationPtr;
+	typedef boost::shared_ptr<Resource>				ResourcePtr;
+	typedef boost::shared_ptr<ResourceManager>		ResourceManagerPtr;
+	typedef boost::shared_ptr<Texture>				TexturePtr;
+	typedef boost::shared_ptr<SubMesh>				SubMeshPtr;
+	typedef boost::shared_ptr<Mesh>					MeshPtr;
+
+	typedef boost::shared_ptr<Model>				ModelPtr;
+	typedef boost::shared_ptr<NextGenTextureDesc>	NextGenTextureDescPtr;
+	typedef boost::shared_ptr<LightMapDesc>			LightMapDescPtr;
+
+	typedef boost::shared_ptr<IRenderable>			IRenderablePtr;
+	typedef boost::shared_ptr<IMovable>				IMovablePtr;
+
+	typedef boost::shared_ptr<IndexBuffer>			IndexBufferPtr;
 }

@@ -64,6 +64,7 @@ namespace Aurora
 		enum ResourceType
 		{
 			RT_SHADER,
+			RT_VERTEX_DECL,
 			RT_MESH,
 			RT_MATERIAL,
 			RT_EFFECT,

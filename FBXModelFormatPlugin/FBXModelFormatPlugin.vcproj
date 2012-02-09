@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="Core"
-	ProjectGUID="{A099C41D-458E-4914-AB7E-6B4434505EC9}"
-	RootNamespace="Core"
+	Name="FBXModelFormatPlugin"
+	ProjectGUID="{9DFDF9E1-73E8-4CDC-8F4C-509B659BFC01}"
+	RootNamespace="FBXModelFormatPlugin"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -41,8 +41,8 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\Dependencies\boost;..\Dependencies\nedmalloc;..\Dependencies\tinyxml"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS"
+				AdditionalIncludeDirectories="..\Dependencies\fbxsdk\include"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;FBXMODELFORMATPLUGIN_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -62,6 +62,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="..\Dependencies\fbxsdk\lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				ImportLibrary="..\Lib\Debug\$(TargetName).lib"
@@ -116,7 +117,8 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS"
+				AdditionalIncludeDirectories="..\Dependencies\fbxsdk\include"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;FBXMODELFORMATPLUGIN_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="2"
@@ -135,6 +137,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories="..\Dependencies\fbxsdk\lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -173,66 +176,6 @@
 			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
-			<File
-				RelativePath=".\BoneWeightBuffer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\ColourValue.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\FrameBuffer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\GeometryBuffer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\GraphicsBuffer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\IndexBuffer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Mesh.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Model.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\RenderEngine.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\RenderState.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Resource.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\ResourceManager.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Texture.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\TextureCoordBuffer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\VertexDeclaration.cpp"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="Í·ÎÄ¼þ"
@@ -240,109 +183,9 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\ColourValue.h"
+				RelativePath=".\FBXModelFormatPlugin.h"
 				>
 			</File>
-			<File
-				RelativePath=".\PixelFormat.h"
-				>
-			</File>
-			<File
-				RelativePath=".\RenderEngine.h"
-				>
-			</File>
-			<Filter
-				Name="Resource"
-				>
-				<File
-					RelativePath=".\IndexBuffer.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Mesh.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Resource.h"
-					>
-				</File>
-				<File
-					RelativePath=".\ResourceManager.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Texture.h"
-					>
-				</File>
-				<File
-					RelativePath=".\VertexDeclaration.h"
-					>
-				</File>
-				<Filter
-					Name="MultiStream"
-					>
-					<File
-						RelativePath=".\BoneWeightBuffer.h"
-						>
-					</File>
-					<File
-						RelativePath=".\GeometryBuffer.h"
-						>
-					</File>
-					<File
-						RelativePath=".\GraphicsBuffer.h"
-						>
-					</File>
-					<File
-						RelativePath=".\MultiStream.h"
-						>
-					</File>
-					<File
-						RelativePath=".\TextureCoordBuffer.h"
-						>
-					</File>
-				</Filter>
-			</Filter>
-			<Filter
-				Name="Scene"
-				>
-				<File
-					RelativePath=".\Model.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Movable.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="Render"
-				>
-				<File
-					RelativePath=".\BlendMode.h"
-					>
-				</File>
-				<File
-					RelativePath=".\FrameBuffer.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Renderable.h"
-					>
-				</File>
-				<File
-					RelativePath=".\RenderSettings.h"
-					>
-				</File>
-				<File
-					RelativePath=".\RenderState.h"
-					>
-				</File>
-				<File
-					RelativePath=".\TextureRenderState.h"
-					>
-				</File>
-			</Filter>
 		</Filter>
 		<Filter
 			Name="PCH"
@@ -377,10 +220,6 @@
 			</File>
 		</Filter>
 		<File
-			RelativePath=".\Core.h"
-			>
-		</File>
-		<File
 			RelativePath=".\dllmain.cpp"
 			>
 			<FileConfiguration
@@ -401,10 +240,6 @@
 					CompileAsManaged="0"
 				/>
 			</FileConfiguration>
-		</File>
-		<File
-			RelativePath=".\Prerequisites.h"
-			>
 		</File>
 	</Files>
 	<Globals>

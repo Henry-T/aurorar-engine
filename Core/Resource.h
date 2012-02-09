@@ -47,16 +47,18 @@ namespace Aurora
 			LS_MAX
 		};
 
-		virtual bool	Load() = 0;
+		virtual bool	Load(String& path, const String& name);
 
-		virtual void	UnLoad() = 0;
+		virtual void	UnLoad();
 
 
 		// 设备丢失
 		virtual void    OnDeviceLost() = 0;
 
 		// 通过上层的数据 构建相应的API层资源对象 对象指针由API层子类声明
-		virtual bool	MakeAPIObject() = 0;
+		virtual bool	MakeAPIObject(const String& filename) = 0;
+
+		virtual void    ReleaseAPIObject() = 0;
 
 		// Unload
 		// 用于排序内存的默认策略

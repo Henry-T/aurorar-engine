@@ -8,6 +8,8 @@
 #pragma once
 
 #include "Prerequisites.h"
+#include "Resource.h"
+#include "PixelFormat.h"
 
 namespace Aurora
 {
@@ -25,12 +27,31 @@ namespace Aurora
 		TEX_TYPE_2D_ARRAY = 5
 	};
 
-	class CORE_API Texture
+	class CORE_API Texture : public Resource
 	{
 	public:
 
-		Texture(void);
+		explicit Texture(TextureType type);
 		virtual ~Texture(void);
+
+		virtual bool	Load(String& path, const String& name);
+
+		virtual void	UnLoad();
+
+	protected:
+		TextureType		m_eType;
+
+		uint			m_nWidth;
+
+		uint			m_nHeight;
+
+		bool			m_bMipmap;
+
+		uint			m_nMipmapLevel;
+
+		PixelFormat		m_Format;
+
+		bool			m_bIsRenderTarget;
 	};
 
 }

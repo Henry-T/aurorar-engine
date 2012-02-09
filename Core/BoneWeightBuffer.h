@@ -35,6 +35,8 @@ namespace Aurora
 		bool				m_bUseWeight;
 	};
 
+	
+	
 
 
 }

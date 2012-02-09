@@ -47,9 +47,11 @@ namespace Aurora
 		bool				m_bUseSpecularColor;
 
 
-		boost::shared_ptr<VertexDeclaration>	m_pVD;
+		VertexDeclarationPtr	m_pVD;
 
 	};
 
+	
+	
 }
 
