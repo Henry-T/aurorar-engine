@@ -12,7 +12,7 @@
 
 namespace Aurora
 {
-	class CORE_API BoneWeightBuffer : public GeneralAllocatedObject
+	class CORE_API BoneWeightBuffer : public ResourceAllocatedObject
 	{
 	public:
 		BoneWeightBuffer(void);
@@ -25,9 +25,6 @@ namespace Aurora
 		bool				HasWeight() const;
 
 		ushort				GetWeightCountPerVertex() const;
-
-		// 根据具体的数据 创建顶点声明
-		void				MakeDeclaration();
 
 	protected:
 		BoneWeightList		m_vecBoneWeight;
