@@ -11,15 +11,20 @@
 
 namespace Aurora
 {
-	class CORE_API GraphicsBuffer : public GeometryAllocatedObject
+	class CORE_API GraphicsBuffer : public ResourceAllocatedObject
 	{
 	public:
 		GraphicsBuffer(void);
 		virtual ~GraphicsBuffer(void);
 
+		// 根据具体的数据 创建顶点声明
+		virtual void			MakeDeclaration();
+
 	protected:
 		GeometryBufferPtr		m_pGeoBuf;
 		TextureCoordBufferPtr	m_pTexCoordBuf;
 		BoneWeightBufferPtr		m_pBoneWeightBuf;
+
+		VertexDeclarationPtr	m_pVD;
 	};
 }

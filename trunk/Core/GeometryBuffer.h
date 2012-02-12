@@ -14,7 +14,7 @@
 
 namespace Aurora
 {
-	class CORE_API GeometryBuffer : public GeneralAllocatedObject
+	class CORE_API GeometryBuffer : public ResourceAllocatedObject
 	{
 	public:
 		GeometryBuffer(void);
@@ -32,9 +32,6 @@ namespace Aurora
 
 		void				Clear();
 
-		// 根据具体的数据 创建顶点声明
-		void				MakeDeclaration();
-
 	protected:
 		PositionList		m_vecPos;				// 坐标
 
@@ -45,9 +42,6 @@ namespace Aurora
 		bool				m_bUseDiffuseColor;
 		SpecularColorList	m_vecSpecularColor;
 		bool				m_bUseSpecularColor;
-
-
-		VertexDeclarationPtr	m_pVD;
 
 	};
 

@@ -12,7 +12,7 @@
 
 namespace Aurora
 {
-	class CORE_API TextureCoordBuffer : public GeneralAllocatedObject
+	class CORE_API TextureCoordBuffer : public ResourceAllocatedObject
 	{
 	public:
 		TextureCoordBuffer(void);
@@ -23,9 +23,6 @@ namespace Aurora
 		bool				IsLightMapUVUsed() const;
 
 		void				Clear();
-
-		// 根据具体的数据 创建顶点声明
-		void				MakeDeclaration();
 
 	protected:
 		UVList				m_vecObjectUV;			// 自身UV
