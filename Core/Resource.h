@@ -11,7 +11,7 @@
 
 namespace Aurora
 {
-	class CORE_API Resource : public ResourceAllocatedObject
+	class CORE_API Resource : public boost::enable_shared_from_this<Resource>, public ResourceAllocatedObject
 	{
 	public:
 		Resource(void);
@@ -25,11 +25,11 @@ namespace Aurora
 		public:
 			virtual ~LoadingListener() {}
 
-			virtual void PreparingComplete(Resource*)	{  }
+			virtual void PreparingComplete(ResourcePtr)	{}
 
-			virtual void LoadingComplete(Resource*)		{  }
+			virtual void LoadingComplete(ResourcePtr)	{}
 
-			virtual void UnLoadingComplete(Resource*)	{  }
+			virtual void UnLoadingComplete(ResourcePtr)	{}
 		};
 
 		enum LoadingState

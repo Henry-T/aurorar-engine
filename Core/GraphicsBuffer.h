@@ -18,7 +18,7 @@ namespace Aurora
 		virtual ~GraphicsBuffer(void);
 
 		// 根据具体的数据 创建顶点声明
-		virtual void			MakeDeclaration();
+		virtual void			MakeDeclaration() = 0;
 
 	protected:
 		GeometryBufferPtr		m_pGeoBuf;

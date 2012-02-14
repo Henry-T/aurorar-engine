@@ -26,13 +26,14 @@
 #include "..\Common\Singleton.h"
 #include "Resource.h"
 #include "..\Common\String.h"
+#include "ResourceDefines.h"
 
 namespace Aurora
 {
-	class LoadingDeque
+	class LoadingQueue : public ResourceAllocatedObject
 	{
 	public:
-		LoadingDeque() {}
+		LoadingQueue() {}
 		typedef stdext::hash_map<String, ResourcePtr>			ResourceMap;
 		typedef stdext::hash_map<Resource::ResourceHandle, ResourcePtr>	ResourceHandleMap;
 
@@ -61,17 +62,7 @@ namespace Aurora
 		~ResourceManager(void);
 
 		// 顺序不能随意改 暂时先以此顺序作为加载优先级
-		enum ResourceType
-		{
-			RT_SHADER,
-			RT_VERTEX_DECL,
-			RT_MESH,
-			RT_MATERIAL,
-			RT_EFFECT,
-			RT_TEXTURE,
-			
-			RT_MAX
-		};
+		
 
 		static ResourceManager& getSingleton(void);
 
@@ -92,9 +83,9 @@ namespace Aurora
 
 	private:
 
-		typedef map<int, LoadingDeque>::type LoadingDequeMap;
+		typedef map<int, LoadingQueue>::type LoadingQueueMap;
 
-		LoadingDequeMap	m_mapLoadingDeque;
+		LoadingQueueMap	m_mapLoadingDeque;
 		
 
 		typedef map<int, StringVector>::type PathMap;

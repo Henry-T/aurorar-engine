@@ -210,11 +210,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\RenderQueue.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\RenderState.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\Resource.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ResourceFactory.cpp"
 				>
 			</File>
 			<File
@@ -264,6 +272,14 @@
 				</File>
 				<File
 					RelativePath=".\Resource.h"
+					>
+				</File>
+				<File
+					RelativePath=".\ResourceDefines.h"
+					>
+				</File>
+				<File
+					RelativePath=".\ResourceFactory.h"
 					>
 				</File>
 				<File
@@ -328,6 +344,10 @@
 				</File>
 				<File
 					RelativePath=".\Renderable.h"
+					>
+				</File>
+				<File
+					RelativePath=".\RenderQueue.h"
 					>
 				</File>
 				<File

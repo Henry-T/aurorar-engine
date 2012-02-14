@@ -34,7 +34,7 @@ namespace Aurora
 
 		for (int i = RT_MESH; i < RT_MAX; ++i)
 		{
-			m_mapLoadingDeque.insert(LoadingDequeMap::value_type(i, LoadingDeque()));
+			m_mapLoadingDeque.insert(LoadingQueueMap::value_type(i, LoadingQueue()));
 		}
 	}
 
@@ -44,7 +44,7 @@ namespace Aurora
 		{
 			m_mapPath.erase(it);
 		}
-		for (LoadingDequeMap::iterator it = m_mapLoadingDeque.begin(); it != m_mapLoadingDeque.end(); ++it)
+		for (LoadingQueueMap::iterator it = m_mapLoadingDeque.begin(); it != m_mapLoadingDeque.end(); ++it)
 		{
 			m_mapLoadingDeque.erase(it);
 		}

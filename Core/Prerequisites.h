@@ -37,6 +37,9 @@ namespace Aurora
 	interface IMovable;
 
 	class IndexBuffer;
+
+	class ResourceFactory;
+	class RenderQueue;
 }
 
 namespace Aurora
@@ -63,4 +66,7 @@ namespace Aurora
 	typedef boost::shared_ptr<IMovable>				IMovablePtr;
 
 	typedef boost::shared_ptr<IndexBuffer>			IndexBufferPtr;
+
+	typedef boost::shared_ptr<ResourceFactory>		ResourceFactoryPtr;
+	typedef boost::shared_ptr<RenderQueue>			RenderQueuePtr;
 }
