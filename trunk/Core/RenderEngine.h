@@ -8,14 +8,19 @@
 #pragma once
 #include "Prerequisites.h"
 #include "RenderSettings.h"
+#include "..\Common\Singleton.h"
 
 namespace Aurora
 {
- 	class CORE_API RenderEngine : public GeneralAllocatedObject
+ 	class CORE_API RenderEngine : public Singleton<RenderEngine>, public RenderSysAllocatedObject
  	{
  	public:
  		RenderEngine(void);
  		virtual ~RenderEngine(void);
+
+		static RenderEngine& getSingleton(void);
+
+		static RenderEngine* getSingletonPtr(void);
  
  
  		// 初始化渲染设备

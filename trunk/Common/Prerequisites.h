@@ -12,6 +12,7 @@
 #include "..\MemoryAllocator\STLAllocator.h"
 #include "Platform.h"
 #include "boost/shared_ptr.hpp"
+#include <boost/enable_shared_from_this.hpp>
 
 #define USE_NED_MEM_ALLOC 1
 
