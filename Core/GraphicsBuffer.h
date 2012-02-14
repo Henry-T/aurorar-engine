@@ -20,6 +20,8 @@ namespace Aurora
 		// 根据具体的数据 创建顶点声明
 		virtual void			MakeDeclaration() = 0;
 
+		virtual void			CreateDeviceBuffer()=0;
+
 	protected:
 		GeometryBufferPtr		m_pGeoBuf;
 		TextureCoordBufferPtr	m_pTexCoordBuf;
