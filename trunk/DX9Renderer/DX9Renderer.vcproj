@@ -41,6 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="..\Dependencies\boost;..\Core"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;DX9RENDERER_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -62,7 +63,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="d3d9.lib d3dx9.lib dxerr.lib"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="..\Lib\Debug"
+				AdditionalLibraryDirectories="..\Lib\Debug;..\Dependencies\dxsdk\Lib\x86"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				ImportLibrary="..\Lib\Debug\$(TargetName).lib"
@@ -182,6 +183,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DX9Model.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\DX9RenderEngine.cpp"
 				>
 			</File>
@@ -189,6 +194,14 @@
 				RelativePath=".\DX9VertexDeclaration.cpp"
 				>
 			</File>
+			<Filter
+				Name="DX9Buffers"
+				>
+				<File
+					RelativePath=".\DX9GraphicsBuffer.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Í·ÎÄ¼þ"
@@ -197,6 +210,10 @@
 			>
 			<File
 				RelativePath=".\DX9Mapping.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DX9Model.h"
 				>
 			</File>
 			<File
@@ -211,6 +228,14 @@
 				RelativePath=".\DX9VertexDeclaration.h"
 				>
 			</File>
+			<Filter
+				Name="DX9Buffers"
+				>
+				<File
+					RelativePath=".\DX9GraphicsBuffer.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="PCH"

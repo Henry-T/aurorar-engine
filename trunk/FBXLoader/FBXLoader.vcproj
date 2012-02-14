@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)FbxSdk\include&quot; &quot;$(SolutionDir)Core&quot;"
+				AdditionalIncludeDirectories="..\Common;&quot;$(ProjectDir)..\Core&quot;;&quot;$(ProjectDir)FbxSdk\include&quot; &quot;$(SolutionDir)Core&quot;;E:\Projects\Aurora\Dependencies\fbxsdk\include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;FBXSDK_SHARED"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -156,6 +156,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Loader.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.cpp"
 				>
 				<FileConfiguration
@@ -183,6 +187,10 @@
 			>
 			<File
 				RelativePath=".\FBXLoader.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Loader.h"
 				>
 			</File>
 			<File
