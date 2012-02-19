@@ -5,7 +5,6 @@ namespace Aurora
 {
 	Mesh::Mesh(void)
 	{
-		m_vecSubMesh.clear();
 	}
 
 	Mesh::~Mesh(void)

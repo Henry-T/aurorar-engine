@@ -206,6 +206,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Pass.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\RenderEngine.cpp"
 				>
 			</File>
@@ -227,6 +231,14 @@
 			</File>
 			<File
 				RelativePath=".\ResourceManager.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Shader.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Technique.cpp"
 				>
 			</File>
 			<File
@@ -271,6 +283,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\Pass.h"
+					>
+				</File>
+				<File
 					RelativePath=".\Resource.h"
 					>
 				</File>
@@ -284,6 +300,14 @@
 				</File>
 				<File
 					RelativePath=".\ResourceManager.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Shader.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Technique.h"
 					>
 				</File>
 				<File
@@ -362,6 +386,10 @@
 					RelativePath=".\TextureRenderState.h"
 					>
 				</File>
+			</Filter>
+			<Filter
+				Name="Material"
+				>
 			</Filter>
 		</Filter>
 		<Filter

@@ -41,6 +41,12 @@ namespace Aurora
 
 		virtual bool		Render() { return true; }
 
+		bool				IsStatic() const;
+
+		bool				IsLightMapUsed() const;
+
+		bool				IsNextGen() const;
+
 	protected:
 
 		bool				m_bIsStatic;
@@ -53,7 +59,9 @@ namespace Aurora
 
 		bool				m_bIsNextGenModel;
 
-		bool				m_bLightAffect;
+		bool				m_bDynamicLightAffect;		// 是否接受动态光照
+
+		bool				m_bStaticLightAffect;		// 是否生成光照图
 
 		LightMapDesc		m_LightMap;
 	};

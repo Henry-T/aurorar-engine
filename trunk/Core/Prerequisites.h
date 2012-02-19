@@ -25,7 +25,6 @@ namespace Aurora
 	class Resource;
 	class ResourceManager;
 	class Texture;
-	class SubMesh;
 	class Mesh;
 
 	class Model;
@@ -40,6 +39,9 @@ namespace Aurora
 
 	class ResourceFactory;
 	class RenderQueue;
+
+	class Pass;
+	class Technique;
 }
 
 namespace Aurora
@@ -55,7 +57,6 @@ namespace Aurora
 	typedef boost::shared_ptr<Resource>				ResourcePtr;
 	typedef boost::shared_ptr<ResourceManager>		ResourceManagerPtr;
 	typedef boost::shared_ptr<Texture>				TexturePtr;
-	typedef boost::shared_ptr<SubMesh>				SubMeshPtr;
 	typedef boost::shared_ptr<Mesh>					MeshPtr;
 
 	typedef boost::shared_ptr<Model>				ModelPtr;
@@ -69,4 +70,7 @@ namespace Aurora
 
 	typedef boost::shared_ptr<ResourceFactory>		ResourceFactoryPtr;
 	typedef boost::shared_ptr<RenderQueue>			RenderQueuePtr;
+
+	typedef boost::shared_ptr<Pass>					PassPtr;
+	typedef boost::shared_ptr<Technique>			TechniquePtr;
 }
