@@ -12,31 +12,23 @@
 
 namespace Aurora
 {
-	class CORE_API SubMesh
-	{
-	public:
-		friend class Mesh;
-
-	private:
-		GraphicsBufferPtr   m_pVB;
-
-		IndexBufferPtr		m_pIB;
-	};
-
+	// 去掉了SubMesh的概念 现在Mesh为最小的网格单位
+	// 多个SubMesh实现的效果（角色换装）改为一个专用
+	// 的模型类里面包含多个Model
 	class CORE_API Mesh : public Resource
 	{
 	public:
 		Mesh(void);
 		virtual ~Mesh(void);
 
-		virtual bool	Load(String& path, const String& name);
+		virtual bool		Load(String& path, const String& name);
 
-		virtual void	UnLoad();
+		virtual void		UnLoad();
 
 	protected:
-		typedef vector<SubMesh>::type SubMeshList;
+		GraphicsBufferPtr   m_pVB;
 
-		SubMeshList	m_vecSubMesh;
+		IndexBufferPtr		m_pIB;
 
 	};
 }
