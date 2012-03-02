@@ -25,6 +25,8 @@ namespace Aurora
 
 		virtual void		UnLoad();
 
+		GraphicsBufferPtr	GetGraphicsBufferPtr() const;
+
 	protected:
 		GraphicsBufferPtr   m_pVB;
 

@@ -21,4 +21,9 @@ namespace Aurora
 		return __super::UnLoad();
 	}
 
+	GraphicsBufferPtr Mesh::GetGraphicsBufferPtr() const
+	{
+		return m_pVB;
+	}
+
 }

@@ -25,6 +25,7 @@
 *********************************************************************/
 #pragma once
 #include "Prerequisites.h"
+#include "Resource.h"
 
 namespace Aurora
 {
@@ -42,9 +43,9 @@ namespace Aurora
 
 		void			EnableTechnique(uint8 index, bool enable);
 
-		virtual void	BeginFrame();
+		virtual void	BeginFrame()=0;
 
-		virtual void	EndFrame();
+		virtual void	EndFrame()=0;
 
 		typedef vector<TechniquePtr>::type TechniqueList;
 
