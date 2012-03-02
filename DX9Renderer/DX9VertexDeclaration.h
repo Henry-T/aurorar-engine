@@ -24,8 +24,5 @@ namespace Aurora
 		static int GetDX9Type( int baseType);
 
 	    static int GetDX9Usage( int baseSemantic);
-
-		Vector3 position;
-		Vector3 normal;
 	};
 }

@@ -42,4 +42,16 @@ namespace Aurora
 	{
 		return m_bUseSpecularColor && m_vecSpecularColor.size() > 0 ? true : false;
 	}
+
+
+	__forceinline int GeometryBuffer::GetCount() const
+	{
+		return m_vecSize;
+	}
+
+	__forceinline void	GeometryBuffer::SetCount( int size)
+	{
+		m_vecSize = size;
+	}
+
 }

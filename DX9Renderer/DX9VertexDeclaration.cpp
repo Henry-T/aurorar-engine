@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "DX9VertexDeclaration.h"
+#include "DX9RenderEngine.h"
 
 namespace Aurora
 {
@@ -14,7 +15,7 @@ namespace Aurora
 	bool DX9VertexDeclaration::MakeAPIObject()
 	{
 		// TODO
-		DX9RenderEngine* pDX9RE = NULL:
+		DX9RenderEngine* pDX9RE = NULL;
 
 		int eleCnt = mElementList.size();
 
@@ -30,7 +31,8 @@ namespace Aurora
 			pDX9VE[i].UsageIndex = mElementList[i].mIndex;
 		}
 
-		pDX9RE->m_pDevice->CreateVertexDeclaration( pDX9VE, &m_pDX9Decl );
+		LPDIRECT3DDEVICE9 pDevice = pDX9RE->m_pDevice;
+		pDevice->CreateVertexDeclaration( pDX9VE, &m_pDX9Decl );
 		return true;
 	}
 

@@ -20,6 +20,8 @@ namespace Aurora
 
 		const D3DCAPS9&			GetRenderDeviceCaps() const { return m_Caps; }
 
+		LPDIRECT3DDEVICE9		GetDevice(){return m_pDevice;}
+
 		
 		bool					RenderOneFrame();
 

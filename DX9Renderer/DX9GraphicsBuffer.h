@@ -12,5 +12,8 @@ namespace Aurora
 		void			CreateDeviceBuffer();
 
 		IDirect3DVertexBuffer9* m_pDX9VB;
+
+	private:
+		int m_nGeoVertexSize;
 	};
 }

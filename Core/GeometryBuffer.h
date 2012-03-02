@@ -32,7 +32,13 @@ namespace Aurora
 
 		void				Clear();
 
+		int					GetCount() const;
+
+		void				SetCount( int size);
+
 	protected:
+		int					m_vecSize;				// 顶点数量
+
 		PositionList		m_vecPos;				// 坐标
 
 		NormalList			m_vecNormal;			// 法线

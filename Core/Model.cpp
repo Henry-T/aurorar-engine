@@ -4,7 +4,7 @@
 namespace Aurora
 {
 	Model::Model(void)
-		: m_bIsStatic(false), m_bLightAffect(true)
+		: m_bIsStatic(false)/*, m_bLightAffect(true)*/
 	{
 	}
 
@@ -24,7 +24,7 @@ namespace Aurora
 
 	__forceinline bool Model::IsNextGen() const
 	{
-		return m_bIsNextGenModel
+		return m_bIsNextGenModel;
 	}
 
 }
