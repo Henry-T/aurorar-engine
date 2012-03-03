@@ -21,4 +21,14 @@ namespace Aurora
 		__super::UnLoad();
 	}
 
+	void Shader::BeginFrame()
+	{
+
+	}
+
+	void Shader::EndFrame()
+	{
+
+	}
+
 }
