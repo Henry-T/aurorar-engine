@@ -42,6 +42,8 @@ namespace Aurora
 
 	class Pass;
 	class Technique;
+
+	class RenderableManager;
 }
 
 namespace Aurora
@@ -73,4 +75,5 @@ namespace Aurora
 
 	typedef boost::shared_ptr<Pass>					PassPtr;
 	typedef boost::shared_ptr<Technique>			TechniquePtr;
+	typedef boost::shared_ptr<RenderableManager>	RenderableManagerPtr;
 }

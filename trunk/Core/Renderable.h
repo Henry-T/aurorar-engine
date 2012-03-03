@@ -14,6 +14,8 @@ namespace Aurora
 {
 	interface CORE_API IRenderable : public RenderSysAllocatedObject
 	{
-		virtual bool Render() = 0;
+		virtual bool	Render() = 0;
+
+		virtual bool	IsTransparent() const = 0;
 	};
 }
