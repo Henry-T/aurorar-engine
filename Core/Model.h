@@ -39,7 +39,9 @@ namespace Aurora
 		Model(void);
 		~Model(void);
 
-		virtual bool		Render() { return true; }
+		virtual bool		Render()				{ return true; }
+
+		virtual bool		IsTransparent() const	{ return true; }
 
 		bool				IsStatic() const;
 
