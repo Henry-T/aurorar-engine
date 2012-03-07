@@ -4,7 +4,11 @@
 namespace Aurora
 {
 	Model::Model(void)
+<<<<<<< .mine
+		: m_bIsStatic(false)
+=======
 		: m_bIsStatic(false)/*, m_bLightAffect(true)*/
+>>>>>>> .r49
 	{
 	}
 
