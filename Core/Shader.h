@@ -13,10 +13,16 @@
 				Shader的含义将完全吻合于真正的渲染API中的Shader 是一
 				个全局概念
 
-				渲染时以Shader为单位 用到同一个Shader的物件分同到一个
-				组里一起画 保证渲染状态切换的次数最少
+				渲染不透明物件时：
+				以Shader为单位 用到同一个Shader的物件分同到一个组里一
+				起画 保证渲染状态切换的次数最少
 				同组之内 根据材质中的纹理排序 保证向GPU传送纹理数据的
 				次数最少
+
+				渲染半透明物件时：
+				将所有半透明物件保存在一个队列里 先进行可见性剔除 将
+				所有可见的半透明物件放到另一个队列里 对这个队列做深度
+				排序 之后按从远到近逐个渲染
 
 				欧若拉的定位为最符合国内网游市场的次世代渲染引擎 因此
 				将不考虑不支持Shader的显卡 同时为了更加符合DX10之后的
@@ -39,18 +45,18 @@ namespace Aurora
 
 		virtual void	UnLoad();
 
-		void			EnableTechnique(const String& name, bool enable);
+		void			SetTechnique(const String& name);
 
-		void			EnableTechnique(uint8 index, bool enable);
+		virtual void	BeginFrame() = 0;
 
-		virtual void	BeginFrame()=0;
-
-		virtual void	EndFrame()=0;
+		virtual void	EndFrame() = 0;
 
 		typedef vector<TechniquePtr>::type TechniqueList;
 
 	protected:
 		TechniqueList	m_vecTechnique;
+
+		TechniquePtr	m_pCurrTech;
 	};
 }
 
